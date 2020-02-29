@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace The_Stove_Place
 {
-    public partial class Form1 : Form
+    public partial class Employee_Information_Page : Form
     {
-        public Form1()
+        public Employee_Information_Page()
         {
             InitializeComponent();
         }

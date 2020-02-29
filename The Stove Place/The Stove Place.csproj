@@ -46,11 +46,65 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Employee_Information_Page.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Employee_Information_Page.Designer.cs">
+      <DependentUpon>Employee_Information_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Information_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_Information_Page.Designer.cs">
+      <DependentUpon>Customer_Information_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Results_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Results_Page.Designer.cs">
+      <DependentUpon>Results_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parts_Info_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parts_Info_Page.Designer.cs">
+      <DependentUpon>Parts_Info_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rental_Invoices_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rental_Invoices_Page.Designer.cs">
+      <DependentUpon>Rental_Invoices_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stoves_Info_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stoves_Info_Page.Designer.cs">
+      <DependentUpon>Stoves_Info_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools_Info_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools_Info_Page.Designer.cs">
+      <DependentUpon>Tools_Info_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool_Rental_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool_Rental_Page.Designer.cs">
+      <DependentUpon>Tool_Rental_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Menu_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Menu_Page.Designer.cs">
+      <DependentUpon>Main_Menu_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Page.Designer.cs">
+      <DependentUpon>Login_Page.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
