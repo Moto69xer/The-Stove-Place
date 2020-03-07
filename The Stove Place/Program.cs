@@ -16,7 +16,7 @@ namespace The_Stove_Place
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main_Menu_Page());
+            Application.Run(new Login_Page());
         }
     }
 }

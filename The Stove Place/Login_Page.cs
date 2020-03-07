@@ -19,7 +19,9 @@ namespace The_Stove_Place
             if (passwordInputTextbox.Text == (passwordFound).Trim())
             {
                 MessageBox.Show("You have been logged in successfully!");
-                this.Close();
+                Main_Menu_Page page = new Main_Menu_Page();
+                page.Show();
+                this.Hide();
             }
             //"Select pasword"
         }
