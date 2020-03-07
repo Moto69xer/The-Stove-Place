@@ -35,6 +35,7 @@
             this.passwordInputTextbox = new System.Windows.Forms.TextBox();
             this.loginInputControls = new System.Windows.Forms.GroupBox();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
+            this.addUserButton = new System.Windows.Forms.Label();
             this.loginInputControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -104,11 +105,24 @@
             this.logoPictureBox.TabIndex = 5;
             this.logoPictureBox.TabStop = false;
             // 
+            // addUserButton
+            // 
+            this.addUserButton.AutoSize = true;
+            this.addUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))));
+            this.addUserButton.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.addUserButton.Location = new System.Drawing.Point(272, 435);
+            this.addUserButton.Name = "addUserButton";
+            this.addUserButton.Size = new System.Drawing.Size(200, 17);
+            this.addUserButton.TabIndex = 6;
+            this.addUserButton.Text = "Click Here To Add A New User";
+            this.addUserButton.Click += new System.EventHandler(this.addUserButton_Click);
+            // 
             // Login_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.addUserButton);
             this.Controls.Add(this.logoPictureBox);
             this.Controls.Add(this.loginInputControls);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -120,6 +134,7 @@
             this.loginInputControls.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -132,6 +147,7 @@
         private System.Windows.Forms.TextBox passwordInputTextbox;
         private System.Windows.Forms.GroupBox loginInputControls;
         private System.Windows.Forms.PictureBox logoPictureBox;
+        private System.Windows.Forms.Label addUserButton;
     }
 }
 
