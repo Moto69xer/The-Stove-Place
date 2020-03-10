@@ -59,5 +59,15 @@ namespace The_Stove_Place.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap The_Stove_Place_Logo {
+            get {
+                object obj = ResourceManager.GetObject("The Stove Place Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

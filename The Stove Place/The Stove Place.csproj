@@ -143,6 +143,9 @@
     <EmbeddedResource Include="Employee_Add_Page.resx">
       <DependentUpon>Employee_Add_Page.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Information_Page.resx">
+      <DependentUpon>Employee_Information_Page.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login_Page.resx">
       <DependentUpon>Login_Page.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +175,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Stove Place Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
