@@ -1,4 +1,5 @@
 ﻿using System;
+using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace The_Stove_Place
 {
@@ -14,6 +16,8 @@ namespace The_Stove_Place
     {
         private String[] arr;
         private Font myFont;
+        static string connString = "Server=209.106.201.103;Database=group5;uid=dbstudent7;pwd=smartpage45";
+        MySqlConnection con = new MySqlConnection(connString);
         public Main_Menu_Page()
         {
             InitializeComponent();
@@ -22,20 +26,10 @@ namespace The_Stove_Place
             arr[0] = "Replacement Parts Info";
             arr[1] = "Tool Info";
             arr[2] = "Stove Info";
+            GetManufacturesList();
 
             this.productInfoButton.DataSource = arr;
 
-            /*DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
-            row.Cells[0].Value = "Rick James";
-            row.Cells[1].Value = "4672891";
-            row.Cells[2].Value = "453.54";
-            dataGridView1.Rows.Add(row);
-
-            DataGridViewRow rows = (DataGridViewRow)dataGridView2.Rows[0].Clone();
-            rows.Cells[0].Value = "Stoves R Us";
-            rows.Cells[1].Value = "(417)555-5555";
-            rows.Cells[2].Value = "www.stovesrus.com";
-            dataGridView2.Rows.Add(rows);*/
         }
 
         private void Main_Menu_Page_Resize(object sender, EventArgs e)
@@ -141,5 +135,19 @@ namespace The_Stove_Place
                 this.Hide();
             }
         }
+        private void GetManufacturesList()
+        {
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataSet ds = new DataSet();
+            MySqlCommand cmd;
+            string select = " SELECT manufactureName,websiteLink,phoneNumber FROM Manufactures ORDER BY manufactureName;";
+            cmd = new MySqlCommand(select, con);
+            adapter.SelectCommand = cmd;
+
+            //FILL DS with Manufacture data
+            adapter.Fill(ds, 1, 8, "Manufactures");
+            dataGridView2.DataSource = ds.Tables[0];
+        }
+
     }
 }

@@ -29,7 +29,7 @@ namespace The_Stove_Place
         private void CheckPassword(string connectionString)
         {
             string queryString =
-                $"Select userPassword FROM Employees WHERE firstName = '{usernameInputTextbox.Text}';";
+                $"Select userPassword FROM Employees WHERE userName = '{usernameInputTextbox.Text}';";
             using (MySqlConnection connection = new MySqlConnection(
                        connectionString))
             {
