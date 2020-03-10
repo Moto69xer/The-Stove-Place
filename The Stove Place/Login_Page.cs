@@ -7,6 +7,7 @@ namespace The_Stove_Place
     public partial class Login_Page : Form
     {
         string passwordFound;
+        public string connectionString = "Server=209.106.201.103;Database=group5;uid=dbstudent21;pwd=thinbrick54";
         public Login_Page()
         {
             InitializeComponent();
@@ -14,12 +15,19 @@ namespace The_Stove_Place
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            CheckPassword("Server=209.106.201.103;Database=group5;uid=dbstudent21;pwd=thinbrick54");
+            CheckPassword(connectionString);
 
-            if (passwordInputTextbox.Text == (passwordFound).Trim())
+            if (passwordInputTextbox.Text == passwordFound)
             {
                 MessageBox.Show("You have been logged in successfully!");
-                this.Close();
+                Main_Menu_Page main_Menu = new Main_Menu_Page();
+                main_Menu.Show();
+                this.Hide();
+            }
+
+            else
+            {
+                MessageBox.Show("Login failed. Please verify information.");
             }
             //"Select pasword"
         }
@@ -27,7 +35,7 @@ namespace The_Stove_Place
         private void CheckPassword(string connectionString)
         {
             string queryString =
-                $"Select userPassword FROM Employees WHERE firstName = '{usernameInputTextbox.Text}';";
+                $"Select userPassword FROM Employees WHERE userName = '{usernameInputTextbox.Text}';";
             using (MySqlConnection connection = new MySqlConnection(
                        connectionString))
             {
@@ -41,12 +49,14 @@ namespace The_Stove_Place
                         passwordFound = (String.Format("{0}", reader[0]));
                     }
                 }
+                connection.Close();
             }
         }
 
         private void addUserButton_Click(object sender, EventArgs e)
         {
-            //Open employee add page
+            Employee_Add_Page employee_Add = new Employee_Add_Page();
+            employee_Add.Show();
         }
     }
 }
