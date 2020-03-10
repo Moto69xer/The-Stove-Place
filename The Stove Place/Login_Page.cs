@@ -20,6 +20,7 @@ namespace The_Stove_Place
             if (passwordInputTextbox.Text == passwordFound)
             {
                 MessageBox.Show("You have been logged in successfully!");
+
                 Main_Menu_Page main_Menu = new Main_Menu_Page();
                 main_Menu.Show();
                 this.Hide();
@@ -28,8 +29,8 @@ namespace The_Stove_Place
             else
             {
                 MessageBox.Show("Login failed. Please verify information.");
+
             }
-            //"Select pasword"
         }
 
         private void CheckPassword(string connectionString)

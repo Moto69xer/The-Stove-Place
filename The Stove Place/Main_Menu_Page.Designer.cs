@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Menu_Page));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.theStovePlaceTitle = new System.Windows.Forms.Label();
             this.custInfoButton = new System.Windows.Forms.Button();
@@ -138,7 +138,7 @@
             this.Rental_Invoice_Number,
             this.Total_Sales});
             this.dataGridView1.Location = new System.Drawing.Point(16, 183);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(659, 300);
             this.dataGridView1.TabIndex = 10;
@@ -146,8 +146,8 @@
             // Employee_Name
             // 
             this.Employee_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Employee_Name.DefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Employee_Name.DefaultCellStyle = dataGridViewCellStyle7;
             this.Employee_Name.DividerWidth = 1;
             this.Employee_Name.HeaderText = "Employee Name";
             this.Employee_Name.Name = "Employee_Name";
@@ -155,8 +155,8 @@
             // Rental_Invoice_Number
             // 
             this.Rental_Invoice_Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Rental_Invoice_Number.DefaultCellStyle = dataGridViewCellStyle44;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Rental_Invoice_Number.DefaultCellStyle = dataGridViewCellStyle8;
             this.Rental_Invoice_Number.DividerWidth = 1;
             this.Rental_Invoice_Number.HeaderText = "Invoice #";
             this.Rental_Invoice_Number.Name = "Rental_Invoice_Number";
@@ -164,10 +164,10 @@
             // Total_Sales
             // 
             this.Total_Sales.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle45.Format = "C2";
-            dataGridViewCellStyle45.NullValue = null;
-            this.Total_Sales.DefaultCellStyle = dataGridViewCellStyle45;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.Format = "C2";
+            dataGridViewCellStyle9.NullValue = null;
+            this.Total_Sales.DefaultCellStyle = dataGridViewCellStyle9;
             this.Total_Sales.DividerWidth = 1;
             this.Total_Sales.HeaderText = "Total_Sales";
             this.Total_Sales.Name = "Total_Sales";
@@ -187,7 +187,7 @@
             this.phoneNumber,
             this.website});
             this.dataGridView2.Location = new System.Drawing.Point(713, 183);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(421, 300);
             this.dataGridView2.TabIndex = 11;
@@ -195,24 +195,24 @@
             // manufacturerName
             // 
             this.manufacturerName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.manufacturerName.DefaultCellStyle = dataGridViewCellStyle46;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.manufacturerName.DefaultCellStyle = dataGridViewCellStyle10;
             this.manufacturerName.HeaderText = "Name";
             this.manufacturerName.Name = "manufacturerName";
             // 
             // phoneNumber
             // 
             this.phoneNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.phoneNumber.DefaultCellStyle = dataGridViewCellStyle47;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.phoneNumber.DefaultCellStyle = dataGridViewCellStyle11;
             this.phoneNumber.HeaderText = "Phone Number #";
             this.phoneNumber.Name = "phoneNumber";
             // 
             // website
             // 
             this.website.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.website.DefaultCellStyle = dataGridViewCellStyle48;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.website.DefaultCellStyle = dataGridViewCellStyle12;
             this.website.HeaderText = "Website";
             this.website.Name = "website";
             // 
@@ -254,7 +254,7 @@
             "Tool Info",
             "Stove Info"});
             this.productInfoButton.Location = new System.Drawing.Point(871, 86);
-            this.productInfoButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productInfoButton.Margin = new System.Windows.Forms.Padding(4);
             this.productInfoButton.Name = "productInfoButton";
             this.productInfoButton.Size = new System.Drawing.Size(280, 19);
             this.productInfoButton.TabIndex = 14;
@@ -282,6 +282,7 @@
             this.Name = "Main_Menu_Page";
             this.ShowIcon = false;
             this.Text = "The Stove Place";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Main_Menu_Page_Resize);
             this.Resize += new System.EventHandler(this.Main_Menu_Page_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
