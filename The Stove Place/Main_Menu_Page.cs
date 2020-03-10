@@ -75,29 +75,27 @@ namespace The_Stove_Place
         // this is for a button clicked to change screens{
         protected void logOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Login_Page page = new Login_Page();
-            page.Show();
-            this.Hide();
+            Application.Restart();
         }
 
         private void custInfoButton_Click(object sender, EventArgs e)
         {
-            Customer_Information_Page page = new Customer_Information_Page();
-            page.Show();
+            Customer_Information_Page custInfo = new Customer_Information_Page();
+            custInfo.ShowDialog();
             this.Hide();
         }
 
         private void employeeInfoButton_Click(object sender, EventArgs e)
         {
-            Employee_Information_Page page = new Employee_Information_Page();
-            page.Show();
+            Employee_Information_Page empInfo = new Employee_Information_Page();
+            empInfo.ShowDialog();
             this.Hide();
         }
 
         private void toolRentalButton_Click(object sender, EventArgs e)
         {
-            Rental_Invoices_Page page = new Rental_Invoices_Page();
-            page.Show();
+            Rental_Invoices_Page rentInv = new Rental_Invoices_Page();
+            rentInv.ShowDialog();
             this.Hide();
         }
         //}
@@ -124,20 +122,20 @@ namespace The_Stove_Place
         {
             if (productInfoButton.Text == "Replacement Parts Info")
             {
-                Parts_Info_Page page = new Parts_Info_Page();
-                page.Show();
+                Parts_Info_Page proInfo = new Parts_Info_Page();
+                proInfo.ShowDialog();
                 this.Hide();
             }
             else if (productInfoButton.Text == "Tool Info")
             {
-                Tools_Info_Page page = new Tools_Info_Page();
-                page.Show();
+                Tools_Info_Page toolInfo = new Tools_Info_Page();
+                toolInfo.ShowDialog();
                 this.Hide();
             }
             else if (productInfoButton.Text == "Stove Info")
             {
-                Stoves_Info_Page page = new Stoves_Info_Page();
-                page.Show();
+                Stoves_Info_Page stoveInfo = new Stoves_Info_Page();
+                stoveInfo.ShowDialog();
                 this.Hide();
             }
         }

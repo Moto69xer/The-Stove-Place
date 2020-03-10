@@ -19,17 +19,14 @@ namespace The_Stove_Place
 
             if (passwordInputTextbox.Text == passwordFound)
             {
-                MessageBox.Show("You have been logged in successfully!");
-
-                Main_Menu_Page main_Menu = new Main_Menu_Page();
-                main_Menu.Show();
                 this.Hide();
+                Main_Menu_Page mainMenu = new Main_Menu_Page();
+                mainMenu.ShowDialog();
             }
 
             else
             {
                 MessageBox.Show("Login failed. Please verify information.");
-
             }
         }
 
@@ -51,13 +48,14 @@ namespace The_Stove_Place
                     }
                 }
                 connection.Close();
+                command.Dispose();
             }
         }
 
         private void addUserButton_Click(object sender, EventArgs e)
         {
-            Employee_Add_Page employee_Add = new Employee_Add_Page();
-            employee_Add.Show();
+            Employee_Add_Page addEmp = new Employee_Add_Page();
+            addEmp.ShowDialog();
         }
     }
 }

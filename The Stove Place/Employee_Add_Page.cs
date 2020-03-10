@@ -35,55 +35,87 @@ namespace The_Stove_Place
             string adminPassword = adminPasswordTextbox.Text;
             isNotAdmin.Checked = true;
 
-            if (password != passwordConfirm)
+            if (password != passwordConfirm || passwordConfirm == "")
             {
-                MessageBox.Show("Passwords do not match!");
-                passwordCheckTextbox.Clear();
-            }
-            CheckAdminPassword(connectionString);
-            if (adminPasswordFound != adminPassword)
-            {
-                MessageBox.Show("Passwords do not match!");
+                MessageBox.Show("Passwords are blank or do not match!\nPlease try again.");
                 passwordCheckTextbox.Clear();
             }
 
             else
             {
-                string insertString =
-                $"INSERT INTO Employees VALUES(NULL,'{firstName}','{lastName}','{email}','{phone}','{username}','{password}', '{isAdmin}');";
-                using (MySqlConnection connection = new MySqlConnection(
-                           connectionString))
+                if (adminPassword != "")
                 {
-                    MySqlCommand command = new MySqlCommand(
-                        insertString, connection);
-                    connection.Open();
-                    command.ExecuteNonQuery();
-                    connection.Close();
+
+                    CheckAdminPassword(connectionString);
+                    if (adminPasswordFound != adminPassword)
+                    {
+                        MessageBox.Show("Admin info incorrect.");
+                        adminUsernameTextbox.Clear();
+                        adminPasswordTextbox.Clear();
+                    }
+
+                    else
+                    {
+                        /*string insertString =
+                        $"INSERT INTO Employees VALUES(NULL,'{firstName}','{lastName}','{email}','{phone}','{username}','{password}', '{isAdmin}');";
+                        using (MySqlConnection connection = new MySqlConnection(
+                                   connectionString))
+                        {
+                            MySqlCommand command = new MySqlCommand(
+                                insertString, connection);
+                            connection.Open();
+                            command.ExecuteNonQuery();
+                            connection.Close();
+                            command.Dispose();
+                        }*/
+                        MessageBox.Show("Welcome to The Stove Place familiy!");
+                        this.Close();
+                        this.Show();
+                    }
+                }
+                else
+                {
+                    /*string insertString =
+                        $"INSERT INTO Employees VALUES(NULL,'{firstName}','{lastName}','{email}','{phone}','{username}','{password}', '{isAdmin}');";
+                    using (MySqlConnection connection = new MySqlConnection(
+                               connectionString))
+                    {
+                        MySqlCommand command = new MySqlCommand(
+                            insertString, connection);
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                        command.Dispose();
+                    }*/
+                    MessageBox.Show("Welcome to The Stove Place familiy dude!");
+                    this.Close();
+                    this.Show();
                 }
             }
-            MessageBox.Show("Welcome to The Stove Place familiy!");
-            Login_Page page = new Login_Page();
-            page.Show();
-            this.Hide();
         }
         private void CheckAdminPassword(string connectionString)
         {
-            string queryString =
-                $"Select userPassword FROM Employees WHERE userName = '{adminUsernameTextbox.Text}';";
-            using (MySqlConnection connection = new MySqlConnection(
-                       connectionString))
+            if (isAdminRadio.Checked == true)
             {
-                MySqlCommand getAdminInfo = new MySqlCommand(
-                    queryString, connection);
-                connection.Open();
-                using (MySqlDataReader reader = getAdminInfo.ExecuteReader())
+
+                /*string queryString =
+                    $"Select userPassword FROM Employees WHERE userName = '{adminUsernameTextbox.Text}' AND isAdmin = '1';";
+                using (MySqlConnection connection = new MySqlConnection(
+                           connectionString))
                 {
-                    while (reader.Read())
+                    MySqlCommand getAdminInfo = new MySqlCommand(
+                        queryString, connection);
+                    connection.Open();
+                    using (MySqlDataReader reader = getAdminInfo.ExecuteReader())
                     {
-                         adminPasswordFound = (String.Format("{0}", reader[0]));
+                        while (reader.Read())
+                        {
+                            adminPasswordFound = (String.Format("{0}", reader[0]));
+                        }
                     }
-                }
-                connection.Close();
+                    connection.Close();
+                    getAdminInfo.Dispose();
+                }*/
             }
         }
 
