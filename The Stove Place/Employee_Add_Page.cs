@@ -56,7 +56,7 @@ namespace The_Stove_Place
 
                     else
                     {
-                        /*string insertString =
+                        string insertString =
                         $"INSERT INTO Employees VALUES(NULL,'{firstName}','{lastName}','{email}','{phone}','{username}','{password}', '{isAdmin}');";
                         using (MySqlConnection connection = new MySqlConnection(
                                    connectionString))
@@ -67,7 +67,7 @@ namespace The_Stove_Place
                             command.ExecuteNonQuery();
                             connection.Close();
                             command.Dispose();
-                        }*/
+                        }
                         MessageBox.Show("Welcome to The Stove Place family!");
                         this.Close();
                         this.Show();
@@ -75,7 +75,7 @@ namespace The_Stove_Place
                 }
                 else
                 {
-                    /*string insertString =
+                    string insertString =
                         $"INSERT INTO Employees VALUES(NULL,'{firstName}','{lastName}','{email}','{phone}','{username}','{password}', '{isAdmin}');";
                     using (MySqlConnection connection = new MySqlConnection(
                                connectionString))
@@ -86,7 +86,7 @@ namespace The_Stove_Place
                         command.ExecuteNonQuery();
                         connection.Close();
                         command.Dispose();
-                    }*/
+                    }
                     MessageBox.Show("Welcome to The Stove Place family");
                     this.Close();
                     this.Show();
@@ -98,7 +98,7 @@ namespace The_Stove_Place
             if (isAdminRadio.Checked == true)
             {
 
-                /*string queryString =
+                string queryString =
                     $"Select userPassword FROM Employees WHERE userName = '{adminUsernameTextbox.Text}' AND isAdmin = '1';";
                 using (MySqlConnection connection = new MySqlConnection(
                            connectionString))
@@ -115,7 +115,7 @@ namespace The_Stove_Place
                     }
                     connection.Close();
                     getAdminInfo.Dispose();
-                }*/
+                }
             }
         }
 
