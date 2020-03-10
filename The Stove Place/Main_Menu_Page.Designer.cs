@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Menu_Page));
+
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.theStovePlaceTitle = new System.Windows.Forms.Label();
             this.custInfoButton = new System.Windows.Forms.Button();
@@ -46,9 +48,6 @@
             this.Rental_Invoice_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total_Sales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.manufacturerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.website = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.recentRentalsLabel = new System.Windows.Forms.Label();
             this.manuContactLabel = new System.Windows.Forms.Label();
             this.productInfoButton = new System.Windows.Forms.ComboBox();
@@ -181,39 +180,15 @@
             this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.manufacturerName,
-            this.phoneNumber,
-            this.website});
-            this.dataGridView2.Location = new System.Drawing.Point(535, 149);
+
+            this.dataGridView2.Location = new System.Drawing.Point(713, 183);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(316, 244);
+            this.dataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dataGridView2.Size = new System.Drawing.Size(421, 300);
             this.dataGridView2.TabIndex = 11;
-            // 
-            // manufacturerName
-            // 
-            this.manufacturerName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.manufacturerName.DefaultCellStyle = dataGridViewCellStyle28;
-            this.manufacturerName.HeaderText = "Name";
-            this.manufacturerName.Name = "manufacturerName";
-            // 
-            // phoneNumber
-            // 
-            this.phoneNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.phoneNumber.DefaultCellStyle = dataGridViewCellStyle29;
-            this.phoneNumber.HeaderText = "Phone Number #";
-            this.phoneNumber.Name = "phoneNumber";
-            // 
-            // website
-            // 
-            this.website.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.website.DefaultCellStyle = dataGridViewCellStyle30;
-            this.website.HeaderText = "Website";
-            this.website.Name = "website";
             // 
             // recentRentalsLabel
             // 
@@ -291,8 +266,10 @@
             this.ShowIcon = false;
             this.Text = "The Stove Place";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_Menu_Page_FormClosed);
             this.Load += new System.EventHandler(this.Main_Menu_Page_Resize);
+
             this.Resize += new System.EventHandler(this.Main_Menu_Page_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -318,9 +295,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Employee_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rental_Invoice_Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total_Sales;
+
         private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn website;
         private System.Windows.Forms.Label usernameLabel;
+
     }
 }
