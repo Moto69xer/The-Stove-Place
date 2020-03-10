@@ -21,6 +21,7 @@ namespace The_Stove_Place
         public Main_Menu_Page()
         {
             InitializeComponent();
+            usernameLabel.Text = Login_Page.username.Trim();
             myFont = new System.Drawing.Font("Microsoft Sans Serif", 8);
             arr = new String[4];
             arr[0] = "Replacement Parts Info";
@@ -44,9 +45,10 @@ namespace The_Stove_Place
             productInfoButton.Location = new Point(custInfoButton.Width + employeeInfoButton.Width + toolRentalButton.Width, toolRentalButton.Location.Y);
             //}
             // this is to keep the login button near the edge of the screen
+            usernameLabel.Location = new Point(this.Width - 90, usernameLabel.Location.Y);
             logOutLink.Location = new Point(this.Width - 90, logOutLink.Location.Y);
             // this is to keep the Title in the center
-            theStovePlaceTitle.Location = new Point(this.Width / 2 - 120, theStovePlaceTitle.Location.Y);
+            theStovePlaceTitle.Location = new Point(this.Width / 2 - 200, theStovePlaceTitle.Location.Y);
             //this keeps the the data grid view {
             dataGridView1.Width = (int)((this.Width -30 ) * 0.60);
             dataGridView2.Width = (int)(0.385*(this.Width - 30));
@@ -69,30 +71,25 @@ namespace The_Stove_Place
         // this is for a button clicked to change screens{
         protected void logOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Login_Page page = new Login_Page();
-            page.Show();
-            this.Hide();
+            Application.Restart();
         }
 
         private void custInfoButton_Click(object sender, EventArgs e)
         {
-            Customer_Information_Page page = new Customer_Information_Page();
-            page.Show();
-            this.Hide();
+            Customer_Information_Page custInfo = new Customer_Information_Page();
+            custInfo.ShowDialog();
         }
 
         private void employeeInfoButton_Click(object sender, EventArgs e)
         {
-            Employee_Information_Page page = new Employee_Information_Page();
-            page.Show();
-            this.Hide();
+            Employee_Information_Page empInfo = new Employee_Information_Page();
+            empInfo.ShowDialog();
         }
 
         private void toolRentalButton_Click(object sender, EventArgs e)
         {
-            Rental_Invoices_Page page = new Rental_Invoices_Page();
-            page.Show();
-            this.Hide();
+            Rental_Invoices_Page rentInv = new Rental_Invoices_Page();
+            rentInv.ShowDialog();
         }
         //}
         //This is for the combo box button{
@@ -118,23 +115,21 @@ namespace The_Stove_Place
         {
             if (productInfoButton.Text == "Replacement Parts Info")
             {
-                Parts_Info_Page page = new Parts_Info_Page();
-                page.Show();
-                this.Hide();
+                Parts_Info_Page proInfo = new Parts_Info_Page();
+                proInfo.ShowDialog();
             }
             else if (productInfoButton.Text == "Tool Info")
             {
-                Tools_Info_Page page = new Tools_Info_Page();
-                page.Show();
-                this.Hide();
+                Tools_Info_Page toolInfo = new Tools_Info_Page();
+                toolInfo.ShowDialog();
             }
             else if (productInfoButton.Text == "Stove Info")
             {
-                Stoves_Info_Page page = new Stoves_Info_Page();
-                page.Show();
-                this.Hide();
+                Stoves_Info_Page stoveInfo = new Stoves_Info_Page();
+                stoveInfo.ShowDialog();
             }
         }
+
         private void GetManufacturesList()
         {
             MySqlDataAdapter adapter = new MySqlDataAdapter();
@@ -147,6 +142,11 @@ namespace The_Stove_Place
             //FILL DS with Manufacture data
             adapter.Fill(ds, 1, 8, "Manufactures");
             dataGridView2.DataSource = ds.Tables[0];
+        }
+
+        private void Main_Menu_Page_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
     }

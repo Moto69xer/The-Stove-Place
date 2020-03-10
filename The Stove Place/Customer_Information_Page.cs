@@ -16,5 +16,11 @@ namespace The_Stove_Place
         {
             InitializeComponent();
         }
+
+        private void mainMenuReturn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Show();
+        }
     }
 }

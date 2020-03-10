@@ -7,6 +7,8 @@ namespace The_Stove_Place
     public partial class Login_Page : Form
     {
         string passwordFound;
+        public static string username;
+        public string connectionString = "Server=209.106.201.103;Database=group5;uid=dbstudent21;pwd=thinbrick54";
         public Login_Page()
         {
             InitializeComponent();
@@ -14,16 +16,20 @@ namespace The_Stove_Place
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            CheckPassword("Server=209.106.201.103;Database=group5;uid=dbstudent21;pwd=thinbrick54");
+            CheckPassword(connectionString);
 
-            if (passwordInputTextbox.Text == (passwordFound).Trim())
+            if (passwordInputTextbox.Text == passwordFound)
             {
-                MessageBox.Show("You have been logged in successfully!");
-                Main_Menu_Page page = new Main_Menu_Page();
-                page.Show();
+                username = usernameInputTextbox.Text;
                 this.Hide();
+                Main_Menu_Page mainMenu = new Main_Menu_Page();
+                mainMenu.ShowDialog();
             }
-            //"Select pasword"
+
+            else
+            {
+                MessageBox.Show("Login failed. Please verify information.");
+            }
         }
 
         private void CheckPassword(string connectionString)
@@ -43,12 +49,15 @@ namespace The_Stove_Place
                         passwordFound = (String.Format("{0}", reader[0]));
                     }
                 }
+                connection.Close();
+                command.Dispose();
             }
         }
 
         private void addUserButton_Click(object sender, EventArgs e)
         {
-            //Open employee add page
+            Employee_Add_Page addEmp = new Employee_Add_Page();
+            addEmp.ShowDialog();
         }
     }
 }

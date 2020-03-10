@@ -29,23 +29,27 @@
         private void InitializeComponent()
         {
             this.addUserPageName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.firstNameTextbox = new System.Windows.Forms.TextBox();
+            this.lastNameTextbox = new System.Windows.Forms.TextBox();
+            this.emailAddressTextbox = new System.Windows.Forms.TextBox();
+            this.phoneNumberTextbox = new System.Windows.Forms.TextBox();
+            this.passwordTextbox = new System.Windows.Forms.TextBox();
+            this.passwordCheckTextbox = new System.Windows.Forms.TextBox();
+            this.adminPasswordTextbox = new System.Windows.Forms.TextBox();
+            this.firstNameLabel = new System.Windows.Forms.Label();
+            this.lastNameLabel = new System.Windows.Forms.Label();
+            this.emailAddressLabel = new System.Windows.Forms.Label();
+            this.phoneNumberLabel = new System.Windows.Forms.Label();
+            this.passwordLabel = new System.Windows.Forms.Label();
+            this.passwordLabel2 = new System.Windows.Forms.Label();
+            this.adminPasswordLabel = new System.Windows.Forms.Label();
+            this.isAdminRadio = new System.Windows.Forms.RadioButton();
+            this.isNotAdmin = new System.Windows.Forms.RadioButton();
+            this.addUserButton = new System.Windows.Forms.Button();
+            this.usernameTextbox = new System.Windows.Forms.TextBox();
+            this.usernameLabel = new System.Windows.Forms.Label();
+            this.adminUsernameTextbox = new System.Windows.Forms.TextBox();
+            this.adminUsernameLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // addUserPageName
@@ -58,176 +62,219 @@
             this.addUserPageName.TabIndex = 0;
             this.addUserPageName.Text = "Add User";
             // 
-            // textBox1
+            // firstNameTextbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(162, 130);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(276, 20);
-            this.textBox1.TabIndex = 1;
+            this.firstNameTextbox.Location = new System.Drawing.Point(162, 130);
+            this.firstNameTextbox.Name = "firstNameTextbox";
+            this.firstNameTextbox.Size = new System.Drawing.Size(276, 20);
+            this.firstNameTextbox.TabIndex = 1;
             // 
-            // textBox2
+            // lastNameTextbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(162, 156);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(276, 20);
-            this.textBox2.TabIndex = 2;
+            this.lastNameTextbox.Location = new System.Drawing.Point(162, 156);
+            this.lastNameTextbox.Name = "lastNameTextbox";
+            this.lastNameTextbox.Size = new System.Drawing.Size(276, 20);
+            this.lastNameTextbox.TabIndex = 2;
             // 
-            // textBox3
+            // emailAddressTextbox
             // 
-            this.textBox3.Location = new System.Drawing.Point(162, 182);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(276, 20);
-            this.textBox3.TabIndex = 3;
+            this.emailAddressTextbox.Location = new System.Drawing.Point(162, 182);
+            this.emailAddressTextbox.Name = "emailAddressTextbox";
+            this.emailAddressTextbox.Size = new System.Drawing.Size(276, 20);
+            this.emailAddressTextbox.TabIndex = 3;
             // 
-            // textBox4
+            // phoneNumberTextbox
             // 
-            this.textBox4.Location = new System.Drawing.Point(162, 208);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(276, 20);
-            this.textBox4.TabIndex = 4;
+            this.phoneNumberTextbox.Location = new System.Drawing.Point(162, 208);
+            this.phoneNumberTextbox.Name = "phoneNumberTextbox";
+            this.phoneNumberTextbox.Size = new System.Drawing.Size(276, 20);
+            this.phoneNumberTextbox.TabIndex = 4;
             // 
-            // textBox5
+            // passwordTextbox
             // 
-            this.textBox5.Location = new System.Drawing.Point(162, 234);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(276, 20);
-            this.textBox5.TabIndex = 5;
+            this.passwordTextbox.Location = new System.Drawing.Point(162, 260);
+            this.passwordTextbox.Name = "passwordTextbox";
+            this.passwordTextbox.PasswordChar = '*';
+            this.passwordTextbox.Size = new System.Drawing.Size(276, 20);
+            this.passwordTextbox.TabIndex = 5;
             // 
-            // textBox6
+            // passwordCheckTextbox
             // 
-            this.textBox6.Location = new System.Drawing.Point(162, 260);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(276, 20);
-            this.textBox6.TabIndex = 6;
+            this.passwordCheckTextbox.Location = new System.Drawing.Point(162, 286);
+            this.passwordCheckTextbox.Name = "passwordCheckTextbox";
+            this.passwordCheckTextbox.PasswordChar = '*';
+            this.passwordCheckTextbox.Size = new System.Drawing.Size(276, 20);
+            this.passwordCheckTextbox.TabIndex = 6;
             // 
-            // textBox7
+            // adminPasswordTextbox
             // 
-            this.textBox7.Location = new System.Drawing.Point(162, 286);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(276, 20);
-            this.textBox7.TabIndex = 7;
+            this.adminPasswordTextbox.Enabled = false;
+            this.adminPasswordTextbox.Location = new System.Drawing.Point(161, 367);
+            this.adminPasswordTextbox.Name = "adminPasswordTextbox";
+            this.adminPasswordTextbox.Size = new System.Drawing.Size(276, 20);
+            this.adminPasswordTextbox.TabIndex = 7;
             // 
-            // label1
+            // firstNameLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 137);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "First Name:";
+            this.firstNameLabel.AutoSize = true;
+            this.firstNameLabel.Location = new System.Drawing.Point(46, 137);
+            this.firstNameLabel.Name = "firstNameLabel";
+            this.firstNameLabel.Size = new System.Drawing.Size(60, 13);
+            this.firstNameLabel.TabIndex = 8;
+            this.firstNameLabel.Text = "First Name:";
             // 
-            // label2
+            // lastNameLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 163);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Last Name:";
+            this.lastNameLabel.AutoSize = true;
+            this.lastNameLabel.Location = new System.Drawing.Point(46, 163);
+            this.lastNameLabel.Name = "lastNameLabel";
+            this.lastNameLabel.Size = new System.Drawing.Size(61, 13);
+            this.lastNameLabel.TabIndex = 9;
+            this.lastNameLabel.Text = "Last Name:";
             // 
-            // label3
+            // emailAddressLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(46, 189);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Email Address:";
+            this.emailAddressLabel.AutoSize = true;
+            this.emailAddressLabel.Location = new System.Drawing.Point(46, 189);
+            this.emailAddressLabel.Name = "emailAddressLabel";
+            this.emailAddressLabel.Size = new System.Drawing.Size(76, 13);
+            this.emailAddressLabel.TabIndex = 10;
+            this.emailAddressLabel.Text = "Email Address:";
             // 
-            // label4
+            // phoneNumberLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(46, 215);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Phone Number:";
+            this.phoneNumberLabel.AutoSize = true;
+            this.phoneNumberLabel.Location = new System.Drawing.Point(46, 215);
+            this.phoneNumberLabel.Name = "phoneNumberLabel";
+            this.phoneNumberLabel.Size = new System.Drawing.Size(81, 13);
+            this.phoneNumberLabel.TabIndex = 11;
+            this.phoneNumberLabel.Text = "Phone Number:";
             // 
-            // label5
+            // passwordLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(46, 241);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Password:";
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Location = new System.Drawing.Point(46, 267);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(56, 13);
+            this.passwordLabel.TabIndex = 12;
+            this.passwordLabel.Text = "Password:";
             // 
-            // label6
+            // passwordLabel2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(46, 267);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "ReEnter Password:";
+            this.passwordLabel2.AutoSize = true;
+            this.passwordLabel2.Location = new System.Drawing.Point(46, 293);
+            this.passwordLabel2.Name = "passwordLabel2";
+            this.passwordLabel2.Size = new System.Drawing.Size(98, 13);
+            this.passwordLabel2.TabIndex = 13;
+            this.passwordLabel2.Text = "ReEnter Password:";
             // 
-            // label7
+            // adminPasswordLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(46, 293);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Admin Password:";
+            this.adminPasswordLabel.AutoSize = true;
+            this.adminPasswordLabel.Location = new System.Drawing.Point(46, 374);
+            this.adminPasswordLabel.Name = "adminPasswordLabel";
+            this.adminPasswordLabel.Size = new System.Drawing.Size(88, 13);
+            this.adminPasswordLabel.TabIndex = 14;
+            this.adminPasswordLabel.Text = "Admin Password:";
             // 
-            // radioButton1
+            // isAdminRadio
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(162, 313);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(106, 17);
-            this.radioButton1.TabIndex = 15;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "User Is An Admin";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.isAdminRadio.AutoSize = true;
+            this.isAdminRadio.Location = new System.Drawing.Point(162, 319);
+            this.isAdminRadio.Name = "isAdminRadio";
+            this.isAdminRadio.Size = new System.Drawing.Size(106, 17);
+            this.isAdminRadio.TabIndex = 15;
+            this.isAdminRadio.TabStop = true;
+            this.isAdminRadio.Text = "User Is An Admin";
+            this.isAdminRadio.UseVisualStyleBackColor = true;
+            this.isAdminRadio.CheckedChanged += new System.EventHandler(this.isAdminRadio_CheckedChanged);
             // 
-            // radioButton2
+            // isNotAdmin
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(312, 313);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(126, 17);
-            this.radioButton2.TabIndex = 16;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "User Is Not An Admin";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.isNotAdmin.AutoSize = true;
+            this.isNotAdmin.Location = new System.Drawing.Point(312, 319);
+            this.isNotAdmin.Name = "isNotAdmin";
+            this.isNotAdmin.Size = new System.Drawing.Size(126, 17);
+            this.isNotAdmin.TabIndex = 16;
+            this.isNotAdmin.TabStop = true;
+            this.isNotAdmin.Text = "User Is Not An Admin";
+            this.isNotAdmin.UseVisualStyleBackColor = true;
+            this.isNotAdmin.CheckedChanged += new System.EventHandler(this.isNotAdmin_CheckedChanged);
             // 
-            // button1
+            // addUserButton
             // 
-            this.button1.Location = new System.Drawing.Point(161, 426);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(162, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Confirm and Add User";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addUserButton.Location = new System.Drawing.Point(161, 426);
+            this.addUserButton.Name = "addUserButton";
+            this.addUserButton.Size = new System.Drawing.Size(162, 23);
+            this.addUserButton.TabIndex = 17;
+            this.addUserButton.Text = "Confirm and Add User";
+            this.addUserButton.UseVisualStyleBackColor = true;
+            this.addUserButton.Click += new System.EventHandler(this.addUserButton_Click);
+            // 
+            // usernameTextbox
+            // 
+            this.usernameTextbox.Location = new System.Drawing.Point(162, 234);
+            this.usernameTextbox.Name = "usernameTextbox";
+            this.usernameTextbox.Size = new System.Drawing.Size(276, 20);
+            this.usernameTextbox.TabIndex = 18;
+            // 
+            // usernameLabel
+            // 
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.Location = new System.Drawing.Point(46, 241);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(58, 13);
+            this.usernameLabel.TabIndex = 19;
+            this.usernameLabel.Text = "Username:";
+            // 
+            // adminUsernameTextbox
+            // 
+            this.adminUsernameTextbox.Enabled = false;
+            this.adminUsernameTextbox.Location = new System.Drawing.Point(162, 342);
+            this.adminUsernameTextbox.Name = "adminUsernameTextbox";
+            this.adminUsernameTextbox.Size = new System.Drawing.Size(276, 20);
+            this.adminUsernameTextbox.TabIndex = 20;
+            // 
+            // adminUsernameLabel
+            // 
+            this.adminUsernameLabel.AutoSize = true;
+            this.adminUsernameLabel.Location = new System.Drawing.Point(46, 349);
+            this.adminUsernameLabel.Name = "adminUsernameLabel";
+            this.adminUsernameLabel.Size = new System.Drawing.Size(90, 13);
+            this.adminUsernameLabel.TabIndex = 21;
+            this.adminUsernameLabel.Text = "Admin Username:";
             // 
             // Employee_Add_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.adminUsernameLabel);
+            this.Controls.Add(this.adminUsernameTextbox);
+            this.Controls.Add(this.usernameLabel);
+            this.Controls.Add(this.usernameTextbox);
+            this.Controls.Add(this.addUserButton);
+            this.Controls.Add(this.isNotAdmin);
+            this.Controls.Add(this.isAdminRadio);
+            this.Controls.Add(this.adminPasswordLabel);
+            this.Controls.Add(this.passwordLabel2);
+            this.Controls.Add(this.passwordLabel);
+            this.Controls.Add(this.phoneNumberLabel);
+            this.Controls.Add(this.emailAddressLabel);
+            this.Controls.Add(this.lastNameLabel);
+            this.Controls.Add(this.firstNameLabel);
+            this.Controls.Add(this.adminPasswordTextbox);
+            this.Controls.Add(this.passwordCheckTextbox);
+            this.Controls.Add(this.passwordTextbox);
+            this.Controls.Add(this.phoneNumberTextbox);
+            this.Controls.Add(this.emailAddressTextbox);
+            this.Controls.Add(this.lastNameTextbox);
+            this.Controls.Add(this.firstNameTextbox);
             this.Controls.Add(this.addUserPageName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "Employee_Add_Page";
-            this.Text = "Employee_Add_Page";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,22 +283,26 @@
         #endregion
 
         private System.Windows.Forms.Label addUserPageName;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox firstNameTextbox;
+        private System.Windows.Forms.TextBox lastNameTextbox;
+        private System.Windows.Forms.TextBox emailAddressTextbox;
+        private System.Windows.Forms.TextBox phoneNumberTextbox;
+        private System.Windows.Forms.TextBox passwordTextbox;
+        private System.Windows.Forms.TextBox passwordCheckTextbox;
+        private System.Windows.Forms.TextBox adminPasswordTextbox;
+        private System.Windows.Forms.Label firstNameLabel;
+        private System.Windows.Forms.Label lastNameLabel;
+        private System.Windows.Forms.Label emailAddressLabel;
+        private System.Windows.Forms.Label phoneNumberLabel;
+        private System.Windows.Forms.Label passwordLabel;
+        private System.Windows.Forms.Label passwordLabel2;
+        private System.Windows.Forms.Label adminPasswordLabel;
+        private System.Windows.Forms.RadioButton isAdminRadio;
+        private System.Windows.Forms.RadioButton isNotAdmin;
+        private System.Windows.Forms.Button addUserButton;
+        private System.Windows.Forms.TextBox usernameTextbox;
+        private System.Windows.Forms.Label usernameLabel;
+        private System.Windows.Forms.TextBox adminUsernameTextbox;
+        private System.Windows.Forms.Label adminUsernameLabel;
     }
 }

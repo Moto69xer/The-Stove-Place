@@ -29,9 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Menu_Page));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.theStovePlaceTitle = new System.Windows.Forms.Label();
             this.custInfoButton = new System.Windows.Forms.Button();
@@ -46,6 +51,7 @@
             this.recentRentalsLabel = new System.Windows.Forms.Label();
             this.manuContactLabel = new System.Windows.Forms.Label();
             this.productInfoButton = new System.Windows.Forms.ComboBox();
+            this.usernameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -55,9 +61,9 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(113, 81);
+            this.pictureBox1.Size = new System.Drawing.Size(85, 66);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -65,19 +71,20 @@
             // 
             this.theStovePlaceTitle.AutoSize = true;
             this.theStovePlaceTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.theStovePlaceTitle.Location = new System.Drawing.Point(483, 22);
+            this.theStovePlaceTitle.Location = new System.Drawing.Point(362, 18);
+            this.theStovePlaceTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.theStovePlaceTitle.Name = "theStovePlaceTitle";
-            this.theStovePlaceTitle.Size = new System.Drawing.Size(313, 46);
+            this.theStovePlaceTitle.Size = new System.Drawing.Size(438, 37);
             this.theStovePlaceTitle.TabIndex = 1;
-            this.theStovePlaceTitle.Text = "The Stove Place";
+            this.theStovePlaceTitle.Text = "Welcome To The Stove Place\r\n";
             this.theStovePlaceTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // custInfoButton
             // 
-            this.custInfoButton.Location = new System.Drawing.Point(0, 85);
-            this.custInfoButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.custInfoButton.Location = new System.Drawing.Point(0, 69);
+            this.custInfoButton.Margin = new System.Windows.Forms.Padding(2);
             this.custInfoButton.Name = "custInfoButton";
-            this.custInfoButton.Size = new System.Drawing.Size(292, 57);
+            this.custInfoButton.Size = new System.Drawing.Size(219, 46);
             this.custInfoButton.TabIndex = 5;
             this.custInfoButton.Text = "Customer Information";
             this.custInfoButton.UseVisualStyleBackColor = true;
@@ -85,10 +92,10 @@
             // 
             // employeeInfoButton
             // 
-            this.employeeInfoButton.Location = new System.Drawing.Point(290, 85);
-            this.employeeInfoButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeeInfoButton.Location = new System.Drawing.Point(218, 69);
+            this.employeeInfoButton.Margin = new System.Windows.Forms.Padding(2);
             this.employeeInfoButton.Name = "employeeInfoButton";
-            this.employeeInfoButton.Size = new System.Drawing.Size(292, 57);
+            this.employeeInfoButton.Size = new System.Drawing.Size(219, 46);
             this.employeeInfoButton.TabIndex = 6;
             this.employeeInfoButton.Text = "Employee Information";
             this.employeeInfoButton.UseVisualStyleBackColor = true;
@@ -96,10 +103,10 @@
             // 
             // toolRentalButton
             // 
-            this.toolRentalButton.Location = new System.Drawing.Point(580, 85);
-            this.toolRentalButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.toolRentalButton.Location = new System.Drawing.Point(435, 69);
+            this.toolRentalButton.Margin = new System.Windows.Forms.Padding(2);
             this.toolRentalButton.Name = "toolRentalButton";
-            this.toolRentalButton.Size = new System.Drawing.Size(292, 57);
+            this.toolRentalButton.Size = new System.Drawing.Size(219, 46);
             this.toolRentalButton.TabIndex = 7;
             this.toolRentalButton.Text = "Tool Rental";
             this.toolRentalButton.UseVisualStyleBackColor = true;
@@ -108,10 +115,9 @@
             // logOutLink
             // 
             this.logOutLink.AutoSize = true;
-            this.logOutLink.Location = new System.Drawing.Point(1079, 46);
-            this.logOutLink.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.logOutLink.Location = new System.Drawing.Point(809, 37);
             this.logOutLink.Name = "logOutLink";
-            this.logOutLink.Size = new System.Drawing.Size(55, 17);
+            this.logOutLink.Size = new System.Drawing.Size(42, 13);
             this.logOutLink.TabIndex = 9;
             this.logOutLink.TabStop = true;
             this.logOutLink.Text = "LogOut";
@@ -131,17 +137,16 @@
             this.Employee_Name,
             this.Rental_Invoice_Number,
             this.Total_Sales});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 183);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 149);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(659, 300);
+            this.dataGridView1.Size = new System.Drawing.Size(494, 244);
             this.dataGridView1.TabIndex = 10;
             // 
             // Employee_Name
             // 
             this.Employee_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Employee_Name.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Employee_Name.DefaultCellStyle = dataGridViewCellStyle25;
             this.Employee_Name.DividerWidth = 1;
             this.Employee_Name.HeaderText = "Employee Name";
             this.Employee_Name.Name = "Employee_Name";
@@ -149,8 +154,8 @@
             // Rental_Invoice_Number
             // 
             this.Rental_Invoice_Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Rental_Invoice_Number.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Rental_Invoice_Number.DefaultCellStyle = dataGridViewCellStyle26;
             this.Rental_Invoice_Number.DividerWidth = 1;
             this.Rental_Invoice_Number.HeaderText = "Invoice #";
             this.Rental_Invoice_Number.Name = "Rental_Invoice_Number";
@@ -158,10 +163,10 @@
             // Total_Sales
             // 
             this.Total_Sales.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.Format = "C2";
-            dataGridViewCellStyle9.NullValue = null;
-            this.Total_Sales.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.Format = "C2";
+            dataGridViewCellStyle27.NullValue = null;
+            this.Total_Sales.DefaultCellStyle = dataGridViewCellStyle27;
             this.Total_Sales.DividerWidth = 1;
             this.Total_Sales.HeaderText = "Total_Sales";
             this.Total_Sales.Name = "Total_Sales";
@@ -177,6 +182,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
             this.dataGridView2.Location = new System.Drawing.Point(713, 183);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
@@ -188,10 +194,9 @@
             // 
             this.recentRentalsLabel.AutoSize = true;
             this.recentRentalsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.recentRentalsLabel.Location = new System.Drawing.Point(253, 159);
-            this.recentRentalsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.recentRentalsLabel.Location = new System.Drawing.Point(190, 129);
             this.recentRentalsLabel.Name = "recentRentalsLabel";
-            this.recentRentalsLabel.Size = new System.Drawing.Size(203, 20);
+            this.recentRentalsLabel.Size = new System.Drawing.Size(171, 17);
             this.recentRentalsLabel.TabIndex = 12;
             this.recentRentalsLabel.Text = "Recent Rentals this Week";
             this.recentRentalsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -203,16 +208,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.manuContactLabel.AutoSize = true;
             this.manuContactLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.manuContactLabel.Location = new System.Drawing.Point(709, 159);
-            this.manuContactLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.manuContactLabel.Location = new System.Drawing.Point(532, 129);
             this.manuContactLabel.Name = "manuContactLabel";
-            this.manuContactLabel.Size = new System.Drawing.Size(221, 20);
+            this.manuContactLabel.Size = new System.Drawing.Size(186, 17);
             this.manuContactLabel.TabIndex = 13;
             this.manuContactLabel.Text = "Manufacture\'s Contact Page";
             this.manuContactLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // productInfoButton
             // 
+            this.productInfoButton.BackColor = System.Drawing.SystemColors.Control;
             this.productInfoButton.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.productInfoButton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.productInfoButton.FormattingEnabled = true;
@@ -221,19 +226,29 @@
             "Replacement Parts Info",
             "Tool Info",
             "Stove Info"});
-            this.productInfoButton.Location = new System.Drawing.Point(871, 86);
-            this.productInfoButton.Margin = new System.Windows.Forms.Padding(4);
+            this.productInfoButton.Location = new System.Drawing.Point(653, 70);
             this.productInfoButton.Name = "productInfoButton";
-            this.productInfoButton.Size = new System.Drawing.Size(280, 19);
+            this.productInfoButton.Size = new System.Drawing.Size(211, 19);
             this.productInfoButton.TabIndex = 14;
             this.productInfoButton.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.productInfoButton_DrawItem);
             this.productInfoButton.SelectedIndexChanged += new System.EventHandler(this.productInfoButton_SelectedIndexChanged);
             // 
+            // usernameLabel
+            // 
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.Location = new System.Drawing.Point(794, 18);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(57, 13);
+            this.usernameLabel.TabIndex = 15;
+            this.usernameLabel.Text = "UserName";
+            this.usernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Main_Menu_Page
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1150, 519);
+            this.ClientSize = new System.Drawing.Size(862, 422);
+            this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.productInfoButton);
             this.Controls.Add(this.manuContactLabel);
             this.Controls.Add(this.recentRentalsLabel);
@@ -245,12 +260,16 @@
             this.Controls.Add(this.custInfoButton);
             this.Controls.Add(this.theStovePlaceTitle);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(815, 509);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(615, 421);
             this.Name = "Main_Menu_Page";
             this.ShowIcon = false;
             this.Text = "The Stove Place";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_Menu_Page_FormClosed);
+            this.Load += new System.EventHandler(this.Main_Menu_Page_Resize);
+
             this.Resize += new System.EventHandler(this.Main_Menu_Page_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -276,5 +295,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Employee_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rental_Invoice_Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total_Sales;
+
+        private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn website;
+        private System.Windows.Forms.Label usernameLabel;
+
     }
 }

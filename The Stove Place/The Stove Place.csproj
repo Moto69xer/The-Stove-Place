@@ -137,6 +137,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Customer_Information_Page.resx">
+      <DependentUpon>Customer_Information_Page.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Employee_Add_Page.resx">
       <DependentUpon>Employee_Add_Page.cs</DependentUpon>
     </EmbeddedResource>
