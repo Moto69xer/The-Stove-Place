@@ -17,6 +17,7 @@ namespace The_Stove_Place
         public Main_Menu_Page()
         {
             InitializeComponent();
+            usernameLabel.Text = Login_Page.username.Trim();
             myFont = new System.Drawing.Font("Microsoft Sans Serif", 8);
             arr = new String[4];
             arr[0] = "Replacement Parts Info";
@@ -50,9 +51,10 @@ namespace The_Stove_Place
             productInfoButton.Location = new Point(custInfoButton.Width + employeeInfoButton.Width + toolRentalButton.Width, toolRentalButton.Location.Y);
             //}
             // this is to keep the login button near the edge of the screen
+            usernameLabel.Location = new Point(this.Width - 90, usernameLabel.Location.Y);
             logOutLink.Location = new Point(this.Width - 90, logOutLink.Location.Y);
             // this is to keep the Title in the center
-            theStovePlaceTitle.Location = new Point(this.Width / 2 - 120, theStovePlaceTitle.Location.Y);
+            theStovePlaceTitle.Location = new Point(this.Width / 2 - 200, theStovePlaceTitle.Location.Y);
             //this keeps the the data grid view {
             dataGridView1.Width = (int)((this.Width -30 ) * 0.60);
             dataGridView2.Width = (int)(0.385*(this.Width - 30));
@@ -82,21 +84,18 @@ namespace The_Stove_Place
         {
             Customer_Information_Page custInfo = new Customer_Information_Page();
             custInfo.ShowDialog();
-            this.Hide();
         }
 
         private void employeeInfoButton_Click(object sender, EventArgs e)
         {
             Employee_Information_Page empInfo = new Employee_Information_Page();
             empInfo.ShowDialog();
-            this.Hide();
         }
 
         private void toolRentalButton_Click(object sender, EventArgs e)
         {
             Rental_Invoices_Page rentInv = new Rental_Invoices_Page();
             rentInv.ShowDialog();
-            this.Hide();
         }
         //}
         //This is for the combo box button{
@@ -124,20 +123,22 @@ namespace The_Stove_Place
             {
                 Parts_Info_Page proInfo = new Parts_Info_Page();
                 proInfo.ShowDialog();
-                this.Hide();
             }
             else if (productInfoButton.Text == "Tool Info")
             {
                 Tools_Info_Page toolInfo = new Tools_Info_Page();
                 toolInfo.ShowDialog();
-                this.Hide();
             }
             else if (productInfoButton.Text == "Stove Info")
             {
                 Stoves_Info_Page stoveInfo = new Stoves_Info_Page();
                 stoveInfo.ShowDialog();
-                this.Hide();
             }
+        }
+
+        private void Main_Menu_Page_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

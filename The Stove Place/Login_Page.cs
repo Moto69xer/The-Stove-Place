@@ -7,6 +7,7 @@ namespace The_Stove_Place
     public partial class Login_Page : Form
     {
         string passwordFound;
+        public static string username;
         public string connectionString = "Server=209.106.201.103;Database=group5;uid=dbstudent21;pwd=thinbrick54";
         public Login_Page()
         {
@@ -19,6 +20,7 @@ namespace The_Stove_Place
 
             if (passwordInputTextbox.Text == passwordFound)
             {
+                username = usernameInputTextbox.Text;
                 this.Hide();
                 Main_Menu_Page mainMenu = new Main_Menu_Page();
                 mainMenu.ShowDialog();

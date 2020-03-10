@@ -68,7 +68,7 @@ namespace The_Stove_Place
                             connection.Close();
                             command.Dispose();
                         }*/
-                        MessageBox.Show("Welcome to The Stove Place familiy!");
+                        MessageBox.Show("Welcome to The Stove Place family!");
                         this.Close();
                         this.Show();
                     }
@@ -87,7 +87,7 @@ namespace The_Stove_Place
                         connection.Close();
                         command.Dispose();
                     }*/
-                    MessageBox.Show("Welcome to The Stove Place familiy dude!");
+                    MessageBox.Show("Welcome to The Stove Place family");
                     this.Close();
                     this.Show();
                 }

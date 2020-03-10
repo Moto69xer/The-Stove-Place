@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Menu_Page));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.theStovePlaceTitle = new System.Windows.Forms.Label();
             this.custInfoButton = new System.Windows.Forms.Button();
@@ -52,6 +52,7 @@
             this.recentRentalsLabel = new System.Windows.Forms.Label();
             this.manuContactLabel = new System.Windows.Forms.Label();
             this.productInfoButton = new System.Windows.Forms.ComboBox();
+            this.usernameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -61,7 +62,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(85, 66);
             this.pictureBox1.TabIndex = 0;
@@ -74,15 +75,15 @@
             this.theStovePlaceTitle.Location = new System.Drawing.Point(362, 18);
             this.theStovePlaceTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.theStovePlaceTitle.Name = "theStovePlaceTitle";
-            this.theStovePlaceTitle.Size = new System.Drawing.Size(249, 37);
+            this.theStovePlaceTitle.Size = new System.Drawing.Size(438, 37);
             this.theStovePlaceTitle.TabIndex = 1;
-            this.theStovePlaceTitle.Text = "The Stove Place";
+            this.theStovePlaceTitle.Text = "Welcome To The Stove Place\r\n";
             this.theStovePlaceTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // custInfoButton
             // 
             this.custInfoButton.Location = new System.Drawing.Point(0, 69);
-            this.custInfoButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.custInfoButton.Margin = new System.Windows.Forms.Padding(2);
             this.custInfoButton.Name = "custInfoButton";
             this.custInfoButton.Size = new System.Drawing.Size(219, 46);
             this.custInfoButton.TabIndex = 5;
@@ -93,7 +94,7 @@
             // employeeInfoButton
             // 
             this.employeeInfoButton.Location = new System.Drawing.Point(218, 69);
-            this.employeeInfoButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.employeeInfoButton.Margin = new System.Windows.Forms.Padding(2);
             this.employeeInfoButton.Name = "employeeInfoButton";
             this.employeeInfoButton.Size = new System.Drawing.Size(219, 46);
             this.employeeInfoButton.TabIndex = 6;
@@ -104,7 +105,7 @@
             // toolRentalButton
             // 
             this.toolRentalButton.Location = new System.Drawing.Point(435, 69);
-            this.toolRentalButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.toolRentalButton.Margin = new System.Windows.Forms.Padding(2);
             this.toolRentalButton.Name = "toolRentalButton";
             this.toolRentalButton.Size = new System.Drawing.Size(219, 46);
             this.toolRentalButton.TabIndex = 7;
@@ -145,8 +146,8 @@
             // Employee_Name
             // 
             this.Employee_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Employee_Name.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Employee_Name.DefaultCellStyle = dataGridViewCellStyle25;
             this.Employee_Name.DividerWidth = 1;
             this.Employee_Name.HeaderText = "Employee Name";
             this.Employee_Name.Name = "Employee_Name";
@@ -154,8 +155,8 @@
             // Rental_Invoice_Number
             // 
             this.Rental_Invoice_Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Rental_Invoice_Number.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Rental_Invoice_Number.DefaultCellStyle = dataGridViewCellStyle26;
             this.Rental_Invoice_Number.DividerWidth = 1;
             this.Rental_Invoice_Number.HeaderText = "Invoice #";
             this.Rental_Invoice_Number.Name = "Rental_Invoice_Number";
@@ -163,10 +164,10 @@
             // Total_Sales
             // 
             this.Total_Sales.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.Total_Sales.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.Format = "C2";
+            dataGridViewCellStyle27.NullValue = null;
+            this.Total_Sales.DefaultCellStyle = dataGridViewCellStyle27;
             this.Total_Sales.DividerWidth = 1;
             this.Total_Sales.HeaderText = "Total_Sales";
             this.Total_Sales.Name = "Total_Sales";
@@ -193,24 +194,24 @@
             // manufacturerName
             // 
             this.manufacturerName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.manufacturerName.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.manufacturerName.DefaultCellStyle = dataGridViewCellStyle28;
             this.manufacturerName.HeaderText = "Name";
             this.manufacturerName.Name = "manufacturerName";
             // 
             // phoneNumber
             // 
             this.phoneNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.phoneNumber.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.phoneNumber.DefaultCellStyle = dataGridViewCellStyle29;
             this.phoneNumber.HeaderText = "Phone Number #";
             this.phoneNumber.Name = "phoneNumber";
             // 
             // website
             // 
             this.website.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.website.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.website.DefaultCellStyle = dataGridViewCellStyle30;
             this.website.HeaderText = "Website";
             this.website.Name = "website";
             // 
@@ -257,11 +258,22 @@
             this.productInfoButton.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.productInfoButton_DrawItem);
             this.productInfoButton.SelectedIndexChanged += new System.EventHandler(this.productInfoButton_SelectedIndexChanged);
             // 
+            // usernameLabel
+            // 
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.Location = new System.Drawing.Point(794, 18);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(57, 13);
+            this.usernameLabel.TabIndex = 15;
+            this.usernameLabel.Text = "UserName";
+            this.usernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Main_Menu_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(862, 422);
+            this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.productInfoButton);
             this.Controls.Add(this.manuContactLabel);
             this.Controls.Add(this.recentRentalsLabel);
@@ -273,12 +285,13 @@
             this.Controls.Add(this.custInfoButton);
             this.Controls.Add(this.theStovePlaceTitle);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(615, 421);
             this.Name = "Main_Menu_Page";
             this.ShowIcon = false;
             this.Text = "The Stove Place";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_Menu_Page_FormClosed);
             this.Load += new System.EventHandler(this.Main_Menu_Page_Resize);
             this.Resize += new System.EventHandler(this.Main_Menu_Page_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -308,5 +321,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn website;
+        private System.Windows.Forms.Label usernameLabel;
     }
 }
