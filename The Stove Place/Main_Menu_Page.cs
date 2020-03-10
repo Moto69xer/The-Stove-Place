@@ -140,7 +140,7 @@ namespace The_Stove_Place
             adapter.SelectCommand = cmd;
 
             //FILL DS with Manufacture data
-            adapter.Fill(ds, 1, 8, "Manufactures");
+            adapter.Fill(ds, 0, 50, "Manufactures");
             dataGridView2.DataSource = ds.Tables[0];
         }
 
