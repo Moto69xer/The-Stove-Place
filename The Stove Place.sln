@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29424.173
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The Stove Place", "The Stove Place\The Stove Place.csproj", "{24617E0B-684A-452B-A41B-161C6C51A542}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibCustomer", "..\..\..\..\..\..\..\..\..\CIS350\Namespaces\Projects\LibEmployee1\LibCustomer.csproj", "{C1C3C206-771C-4F26-A3DC-59D535E31F0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{24617E0B-684A-452B-A41B-161C6C51A542}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24617E0B-684A-452B-A41B-161C6C51A542}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24617E0B-684A-452B-A41B-161C6C51A542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1C3C206-771C-4F26-A3DC-59D535E31F0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1C3C206-771C-4F26-A3DC-59D535E31F0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1C3C206-771C-4F26-A3DC-59D535E31F0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1C3C206-771C-4F26-A3DC-59D535E31F0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
