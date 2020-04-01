@@ -301,7 +301,7 @@
       // navigatorFindTextBox
       // 
       this.navigatorFindTextBox.Name = "navigatorFindTextBox";
-      this.navigatorFindTextBox.Size = new System.Drawing.Size(100, 26);
+      this.navigatorFindTextBox.Size = new System.Drawing.Size(100, 25);
       this.navigatorFindTextBox.ToolTipText = "Find ID";
       // 
       // pictureBox1
