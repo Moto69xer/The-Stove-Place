@@ -84,6 +84,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customer_Add_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_Add_Page.Designer.cs">
+      <DependentUpon>Customer_Add_Page.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee_Add_Page.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,7 @@
     <Compile Include="Stoves_Info_Page.Designer.cs">
       <DependentUpon>Stoves_Info_Page.cs</DependentUpon>
     </Compile>
+    <Compile Include="StringsUsed.cs" />
     <Compile Include="Tools_Info_Page.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +159,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Customer_Add_Page.resx">
+      <DependentUpon>Customer_Add_Page.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer_Information_Page.resx">
       <DependentUpon>Customer_Information_Page.cs</DependentUpon>
     </EmbeddedResource>
