@@ -92,7 +92,7 @@ namespace The_Stove_Place
         }
         MessageBox.Show("New Customer Added!");
         this.Close();
-        this.Show();
+        //this.Show();
       }
       else
       {
@@ -110,9 +110,11 @@ namespace The_Stove_Place
         }
         MessageBox.Show("New Customer Added!");
         this.Close();
-        this.Show();
+        //this.Show();
       }
-
+      this.Close();
+      Customer_Information_Page custInfo = new Customer_Information_Page();
+      custInfo.ShowDialog();
     }
 
     private void isActiveCustomer_CheckedChanged(object sender, EventArgs e)
