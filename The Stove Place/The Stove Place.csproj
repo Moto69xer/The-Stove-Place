@@ -90,6 +90,8 @@
     <Compile Include="Customer_Add_Page.Designer.cs">
       <DependentUpon>Customer_Add_Page.cs</DependentUpon>
     </Compile>
+    <Compile Include="CommonMethods.cs" />
+    <Compile Include="Decryption.cs" />
     <Compile Include="Employee_Add_Page.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +110,7 @@
     <Compile Include="Customer_Information_Page.Designer.cs">
       <DependentUpon>Customer_Information_Page.cs</DependentUpon>
     </Compile>
+    <Compile Include="Encryption.cs" />
     <Compile Include="Results_Page.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Employee_Add_Page.resx">
       <DependentUpon>Employee_Add_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Information_Page.resx">
+      <DependentUpon>Employee_Information_Page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Page.resx">
       <DependentUpon>Login_Page.cs</DependentUpon>

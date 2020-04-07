@@ -150,5 +150,5 @@ namespace The_Stove_Place
                 this.Hide();
             }
         }
-  }
+    }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Page));
             this.usernameLabel = new System.Windows.Forms.Label();
             this.usernameInputTextbox = new System.Windows.Forms.TextBox();
             this.loginButton = new System.Windows.Forms.Button();
@@ -79,6 +80,7 @@
             // 
             this.passwordInputTextbox.Location = new System.Drawing.Point(9, 71);
             this.passwordInputTextbox.Name = "passwordInputTextbox";
+            this.passwordInputTextbox.PasswordChar = '*';
             this.passwordInputTextbox.Size = new System.Drawing.Size(220, 20);
             this.passwordInputTextbox.TabIndex = 2;
             // 
@@ -98,7 +100,9 @@
             // 
             // logoPictureBox
             // 
-            this.logoPictureBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.logoPictureBox.BackColor = System.Drawing.SystemColors.Control;
+            this.logoPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logoPictureBox.BackgroundImage")));
+            this.logoPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.logoPictureBox.Location = new System.Drawing.Point(114, 34);
             this.logoPictureBox.Name = "logoPictureBox";
             this.logoPictureBox.Size = new System.Drawing.Size(256, 256);
@@ -119,6 +123,7 @@
             // 
             // Login_Page
             // 
+            this.AcceptButton = this.loginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
@@ -129,6 +134,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "Login_Page";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Login";
             this.loginInputControls.ResumeLayout(false);
             this.loginInputControls.PerformLayout();

@@ -1,4 +1,5 @@
 ﻿using System;
+using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace The_Stove_Place
 {
@@ -14,28 +16,21 @@ namespace The_Stove_Place
     {
         private String[] arr;
         private Font myFont;
+        static string connString = "Server=209.106.201.103;Database=group5;uid=dbstudent7;pwd=smartpage45";
+        MySqlConnection con = new MySqlConnection(connString);
         public Main_Menu_Page()
         {
             InitializeComponent();
+            usernameLabel.Text = Login_Page.username.Trim();
             myFont = new System.Drawing.Font("Microsoft Sans Serif", 8);
             arr = new String[4];
             arr[0] = "Replacement Parts Info";
             arr[1] = "Tool Info";
             arr[2] = "Stove Info";
+            GetManufacturesList();
 
             this.productInfoButton.DataSource = arr;
 
-            /*DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
-            row.Cells[0].Value = "Rick James";
-            row.Cells[1].Value = "4672891";
-            row.Cells[2].Value = "453.54";
-            dataGridView1.Rows.Add(row);
-
-            DataGridViewRow rows = (DataGridViewRow)dataGridView2.Rows[0].Clone();
-            rows.Cells[0].Value = "Stoves R Us";
-            rows.Cells[1].Value = "(417)555-5555";
-            rows.Cells[2].Value = "www.stovesrus.com";
-            dataGridView2.Rows.Add(rows);*/
         }
 
         private void Main_Menu_Page_Resize(object sender, EventArgs e)
@@ -50,9 +45,10 @@ namespace The_Stove_Place
             productInfoButton.Location = new Point(custInfoButton.Width + employeeInfoButton.Width + toolRentalButton.Width, toolRentalButton.Location.Y);
             //}
             // this is to keep the login button near the edge of the screen
+            usernameLabel.Location = new Point(this.Width - 90, usernameLabel.Location.Y);
             logOutLink.Location = new Point(this.Width - 90, logOutLink.Location.Y);
             // this is to keep the Title in the center
-            theStovePlaceTitle.Location = new Point(this.Width / 2 - 120, theStovePlaceTitle.Location.Y);
+            theStovePlaceTitle.Location = new Point(this.Width / 2 - 200, theStovePlaceTitle.Location.Y);
             //this keeps the the data grid view {
             dataGridView1.Width = (int)((this.Width -30 ) * 0.60);
             dataGridView2.Width = (int)(0.385*(this.Width - 30));
@@ -75,30 +71,25 @@ namespace The_Stove_Place
         // this is for a button clicked to change screens{
         protected void logOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Login_Page page = new Login_Page();
-            page.Show();
-            this.Hide();
+            Application.Restart();
         }
 
         private void custInfoButton_Click(object sender, EventArgs e)
         {
-            Customer_Information_Page page = new Customer_Information_Page();
-            page.Show();
-            this.Hide();
+            Customer_Information_Page custInfo = new Customer_Information_Page();
+            custInfo.ShowDialog();
         }
 
         private void employeeInfoButton_Click(object sender, EventArgs e)
         {
-            Employee_Information_Page page = new Employee_Information_Page();
-            page.Show();
-            this.Hide();
+            Employee_Information_Page empInfo = new Employee_Information_Page();
+            empInfo.ShowDialog();
         }
 
         private void toolRentalButton_Click(object sender, EventArgs e)
         {
-            Rental_Invoices_Page page = new Rental_Invoices_Page();
-            page.Show();
-            this.Hide();
+            Rental_Invoices_Page rentInv = new Rental_Invoices_Page();
+            rentInv.ShowDialog();
         }
         //}
         //This is for the combo box button{
@@ -124,22 +115,39 @@ namespace The_Stove_Place
         {
             if (productInfoButton.Text == "Replacement Parts Info")
             {
-                Parts_Info_Page page = new Parts_Info_Page();
-                page.Show();
-                this.Hide();
+                Parts_Info_Page proInfo = new Parts_Info_Page();
+                proInfo.ShowDialog();
             }
             else if (productInfoButton.Text == "Tool Info")
             {
-                Tools_Info_Page page = new Tools_Info_Page();
-                page.Show();
-                this.Hide();
+                Tools_Info_Page toolInfo = new Tools_Info_Page();
+                toolInfo.ShowDialog();
             }
             else if (productInfoButton.Text == "Stove Info")
             {
-                Stoves_Info_Page page = new Stoves_Info_Page();
-                page.Show();
-                this.Hide();
+                Stoves_Info_Page stoveInfo = new Stoves_Info_Page();
+                stoveInfo.ShowDialog();
             }
         }
+
+        private void GetManufacturesList()
+        {
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataSet ds = new DataSet();
+            MySqlCommand cmd;
+            string select = " SELECT manufactureName,websiteLink,phoneNumber FROM Manufactures ORDER BY manufactureName;";
+            cmd = new MySqlCommand(select, con);
+            adapter.SelectCommand = cmd;
+
+            //FILL DS with Manufacture data
+            adapter.Fill(ds, 0, 50, "Manufactures");
+            dataGridView2.DataSource = ds.Tables[0];
+        }
+
+        private void Main_Menu_Page_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }
