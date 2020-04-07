@@ -8,7 +8,6 @@ namespace The_Stove_Place
     {
         string passwordFound;
         public static string username;
-        public string connectionString = "Server=209.106.201.103;Database=group5;uid=dbstudent21;pwd=thinbrick54";
         public Login_Page()
         {
             InitializeComponent();
@@ -16,11 +15,11 @@ namespace The_Stove_Place
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            CheckPassword(connectionString);
+            username = usernameInputTextbox.Text;
+            CheckPassword(StringsUsed.connectionString);
 
             if (passwordInputTextbox.Text == passwordFound)
             {
-                username = usernameInputTextbox.Text;
                 this.Hide();
                 Main_Menu_Page mainMenu = new Main_Menu_Page();
                 mainMenu.ShowDialog();
@@ -28,19 +27,16 @@ namespace The_Stove_Place
 
             else
             {
-                MessageBox.Show("Login failed. Please verify information.");
+                MessageBox.Show("Login failed. Please verify information an try again.");
             }
         }
 
         private void CheckPassword(string connectionString)
         {
-            string queryString =
-                $"Select userPassword FROM Employees WHERE userName = '{usernameInputTextbox.Text}';";
-            using (MySqlConnection connection = new MySqlConnection(
-                       connectionString))
+            string queryString = $"Select userPassword FROM Employees WHERE userName = '{username}';";
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
-                MySqlCommand command = new MySqlCommand(
-                    queryString, connection);
+                MySqlCommand command = new MySqlCommand(queryString, connection);
                 connection.Open();
                 using (MySqlDataReader reader = command.ExecuteReader())
                 {
@@ -49,6 +45,7 @@ namespace The_Stove_Place
                         passwordFound = (String.Format("{0}", reader[0]));
                     }
                 }
+                MessageBox.Show(passwordFound);
                 connection.Close();
                 command.Dispose();
             }

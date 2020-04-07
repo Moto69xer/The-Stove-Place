@@ -96,7 +96,7 @@
             this.passwordTextbox.Name = "passwordTextbox";
             this.passwordTextbox.PasswordChar = '*';
             this.passwordTextbox.Size = new System.Drawing.Size(276, 20);
-            this.passwordTextbox.TabIndex = 5;
+            this.passwordTextbox.TabIndex = 6;
             // 
             // passwordCheckTextbox
             // 
@@ -104,7 +104,7 @@
             this.passwordCheckTextbox.Name = "passwordCheckTextbox";
             this.passwordCheckTextbox.PasswordChar = '*';
             this.passwordCheckTextbox.Size = new System.Drawing.Size(276, 20);
-            this.passwordCheckTextbox.TabIndex = 6;
+            this.passwordCheckTextbox.TabIndex = 7;
             // 
             // adminPasswordTextbox
             // 
@@ -112,7 +112,7 @@
             this.adminPasswordTextbox.Location = new System.Drawing.Point(162, 367);
             this.adminPasswordTextbox.Name = "adminPasswordTextbox";
             this.adminPasswordTextbox.Size = new System.Drawing.Size(276, 20);
-            this.adminPasswordTextbox.TabIndex = 7;
+            this.adminPasswordTextbox.TabIndex = 9;
             // 
             // firstNameLabel
             // 
@@ -187,7 +187,7 @@
             this.isAdminRadio.TabStop = true;
             this.isAdminRadio.Text = "User Is An Admin";
             this.isAdminRadio.UseVisualStyleBackColor = true;
-            this.isAdminRadio.CheckedChanged += new System.EventHandler(this.isAdminRadio_CheckedChanged);
+            this.isAdminRadio.Click += new System.EventHandler(this.isAdminRadio_CheckedChanged);
             // 
             // isNotAdmin
             // 
@@ -199,14 +199,14 @@
             this.isNotAdmin.TabStop = true;
             this.isNotAdmin.Text = "User Is Not An Admin";
             this.isNotAdmin.UseVisualStyleBackColor = true;
-            this.isNotAdmin.CheckedChanged += new System.EventHandler(this.isNotAdmin_CheckedChanged);
+            this.isNotAdmin.Click += new System.EventHandler(this.isNotAdmin_CheckedChanged);
             // 
             // addUserButton
             // 
             this.addUserButton.Location = new System.Drawing.Point(161, 426);
             this.addUserButton.Name = "addUserButton";
             this.addUserButton.Size = new System.Drawing.Size(162, 23);
-            this.addUserButton.TabIndex = 17;
+            this.addUserButton.TabIndex = 10;
             this.addUserButton.Text = "Confirm and Add User";
             this.addUserButton.UseVisualStyleBackColor = true;
             this.addUserButton.Click += new System.EventHandler(this.addUserButton_Click);
@@ -216,7 +216,7 @@
             this.usernameTextbox.Location = new System.Drawing.Point(162, 234);
             this.usernameTextbox.Name = "usernameTextbox";
             this.usernameTextbox.Size = new System.Drawing.Size(276, 20);
-            this.usernameTextbox.TabIndex = 18;
+            this.usernameTextbox.TabIndex = 5;
             // 
             // usernameLabel
             // 
@@ -233,7 +233,7 @@
             this.adminUsernameTextbox.Location = new System.Drawing.Point(162, 342);
             this.adminUsernameTextbox.Name = "adminUsernameTextbox";
             this.adminUsernameTextbox.Size = new System.Drawing.Size(276, 20);
-            this.adminUsernameTextbox.TabIndex = 20;
+            this.adminUsernameTextbox.TabIndex = 8;
             // 
             // adminUsernameLabel
             // 

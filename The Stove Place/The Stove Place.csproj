@@ -69,6 +69,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommonMethods.cs" />
+    <Compile Include="Decryption.cs" />
     <Compile Include="Employee_Add_Page.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +89,7 @@
     <Compile Include="Customer_Information_Page.Designer.cs">
       <DependentUpon>Customer_Information_Page.cs</DependentUpon>
     </Compile>
+    <Compile Include="Encryption.cs" />
     <Compile Include="Results_Page.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +114,7 @@
     <Compile Include="Stoves_Info_Page.Designer.cs">
       <DependentUpon>Stoves_Info_Page.cs</DependentUpon>
     </Compile>
+    <Compile Include="StringsUsed.cs" />
     <Compile Include="Tools_Info_Page.cs">
       <SubType>Form</SubType>
     </Compile>
