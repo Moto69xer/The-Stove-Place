@@ -75,7 +75,7 @@ namespace The_Stove_Place
 
         private void custInfoButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello fellow students on this page you can sign up to be part of The Stove Place. If you would like to enter your school email while adding a customer we can show you our account confirmation email system.");
+            MessageBox.Show("Hello fellow students on this customer information page you can sign up to be part of The Stove Place. If you would like to enter your school email while adding a customer we can show you our account confirmation email system. This message box will not be present in the final product");
             Customer_Information_Page custInfo = new Customer_Information_Page();
             custInfo.ShowDialog();
         }
