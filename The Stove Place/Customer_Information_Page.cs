@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.ComponentModel;
+
 using System.Data;
 using System.Drawing;
 using MySql.Data.MySqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
-using System.Diagnostics;
-using LibCustomer;
+
 
 namespace The_Stove_Place
 {
@@ -31,9 +26,7 @@ namespace The_Stove_Place
 
         protected void backLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Main_Menu_Page page = new Main_Menu_Page();
-            page.Show();
-            this.Hide();
+            this.Dispose();
         }
 
         protected void newCustLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

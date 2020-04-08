@@ -296,9 +296,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Rental_Invoice_Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total_Sales;
 
-        private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn website;
+
         private System.Windows.Forms.Label usernameLabel;
 
     }
