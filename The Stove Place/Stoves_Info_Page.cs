@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using MySql.Data.MySqlClient;
 using System.Data;
 using System.Drawing;
@@ -57,4 +57,3 @@ namespace The_Stove_Place
         }
     }
 }
-
