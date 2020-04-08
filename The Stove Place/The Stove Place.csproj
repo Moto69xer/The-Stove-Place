@@ -168,6 +168,9 @@
     <EmbeddedResource Include="Main_Menu_Page.resx">
       <DependentUpon>Main_Menu_Page.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parts_Info_Page.resx">
+      <DependentUpon>Parts_Info_Page.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -178,6 +181,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Stoves_Info_Page.resx">
+      <DependentUpon>Stoves_Info_Page.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tools_Info_Page.resx">
       <DependentUpon>Tools_Info_Page.cs</DependentUpon>
     </EmbeddedResource>

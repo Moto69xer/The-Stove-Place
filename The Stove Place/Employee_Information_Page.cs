@@ -19,7 +19,6 @@ namespace The_Stove_Place
         public Employee_Information_Page()
         {
             InitializeComponent();
-            MessageBox.Show("Hello fellow students on this page you can sign up to be part of The Stove Place. If you would like to enter your school email while adding a customer we can show you our account confirmation email system.");
         }
 
         protected void backLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

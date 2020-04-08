@@ -48,7 +48,7 @@ namespace The_Stove_Place
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             DataSet ds = new DataSet();
             MySqlCommand cmd;
-            string select = "Select * From Parts_and_Tools Left Join Manufactures On Parts_and_Tools.manufactureId = Manufactures.manufactureId;";
+            string select = "Select * From Parts_and_Tools Where partType != 'tool';";
             cmd = new MySqlCommand(select, con);
             adapter.SelectCommand = cmd;
 
