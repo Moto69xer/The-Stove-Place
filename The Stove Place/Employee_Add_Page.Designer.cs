@@ -111,6 +111,7 @@
             this.adminPasswordTextbox.Enabled = false;
             this.adminPasswordTextbox.Location = new System.Drawing.Point(162, 367);
             this.adminPasswordTextbox.Name = "adminPasswordTextbox";
+            this.adminPasswordTextbox.PasswordChar = '*';
             this.adminPasswordTextbox.Size = new System.Drawing.Size(276, 20);
             this.adminPasswordTextbox.TabIndex = 9;
             // 

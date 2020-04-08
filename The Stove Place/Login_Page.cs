@@ -45,7 +45,6 @@ namespace The_Stove_Place
                         passwordFound = (String.Format("{0}", reader[0]));
                     }
                 }
-                MessageBox.Show(passwordFound);
                 connection.Close();
                 command.Dispose();
             }

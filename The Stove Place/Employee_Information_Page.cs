@@ -13,12 +13,18 @@ namespace The_Stove_Place
 {
     public partial class Employee_Information_Page : Form
     {
-        static string connString = "Server=209.106.201.103;Database=group5;uid=dbstudent7;pwd=smartpage45";
-        MySqlConnection con = new MySqlConnection(connString);
+       
+        MySqlConnection con = new MySqlConnection(StringsUsed.connectionString);
 
         public Employee_Information_Page()
         {
             InitializeComponent();
+            MessageBox.Show("Hello fellow students on this page you can sign up to be part of The Stove Place. If you would like to enter your school email while adding a customer we can show you our account confirmation email system.");
+        }
+
+        protected void backLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
         }
 
         protected void logOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -29,6 +35,7 @@ namespace The_Stove_Place
         private void Employee_Information_Page_Load(object sender, EventArgs e)
         {
             theStovePlaceTitle.Location = new Point((this.Width / 2) - (theStovePlaceTitle.Size.Width /2) , theStovePlaceTitle.Location.Y);
+            backLink.Location = new Point(this.Width - 90, backLink.Location.Y);
             logOutLink.Location = new Point(this.Width - 90, logOutLink.Location.Y);
             GetManufacturesList();
         }
@@ -36,7 +43,8 @@ namespace The_Stove_Place
         private void Employee_Information_Page_Resize(object sender, EventArgs e)
         {
            logOutLink.Location = new Point(this.Width - 90, logOutLink.Location.Y);
-           theStovePlaceTitle.Location = new Point((this.Width / 2) - (theStovePlaceTitle.Size.Width / 2), theStovePlaceTitle.Location.Y);
+            logOutLink.Location = new Point(this.Width - 90, logOutLink.Location.Y);
+            theStovePlaceTitle.Location = new Point((this.Width / 2) - (theStovePlaceTitle.Size.Width / 2), theStovePlaceTitle.Location.Y);
         }
         private void GetManufacturesList()
         {
