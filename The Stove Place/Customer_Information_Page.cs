@@ -16,8 +16,7 @@ namespace The_Stove_Place
 {
     public partial class Customer_Information_Page : Form
     {
-        static string connString = "Server=209.106.201.103;Database=group5;uid=dbstudent7;pwd=smartpage45";
-        MySqlConnection con = new MySqlConnection(connString);
+        MySqlConnection con = new MySqlConnection(StringsUsed.connectionString);
 
         public Customer_Information_Page()
         {
@@ -31,9 +30,7 @@ namespace The_Stove_Place
 
         protected void backLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Main_Menu_Page page = new Main_Menu_Page();
-            page.Show();
-            this.Hide();
+            this.Close();
         }
 
         protected void newCustLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
