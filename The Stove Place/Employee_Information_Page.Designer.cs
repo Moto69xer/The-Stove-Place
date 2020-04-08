@@ -32,6 +32,7 @@
             this.logOutLink = new System.Windows.Forms.LinkLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.backLink = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -76,6 +77,17 @@
             this.dataGridView1.Size = new System.Drawing.Size(838, 288);
             this.dataGridView1.TabIndex = 8;
             // 
+            // backLink
+            // 
+            this.backLink.AutoSize = true;
+            this.backLink.Location = new System.Drawing.Point(808, 71);
+            this.backLink.Name = "backLink";
+            this.backLink.Size = new System.Drawing.Size(41, 13);
+            this.backLink.TabIndex = 9;
+            this.backLink.TabStop = true;
+            this.backLink.Text = "< Back";
+            this.backLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.backLink_LinkClicked);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::The_Stove_Place.Properties.Resources.The_Stove_Place_Logo;
@@ -94,6 +106,7 @@
             this.ClientSize = new System.Drawing.Size(862, 422);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.logOutLink);
+            this.Controls.Add(this.backLink);
             this.Controls.Add(this.theStovePlaceTitle);
             this.Controls.Add(this.pictureBox1);
             this.MinimumSize = new System.Drawing.Size(615, 421);
@@ -115,6 +128,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label theStovePlaceTitle;
         private System.Windows.Forms.LinkLabel logOutLink;
+        private System.Windows.Forms.LinkLabel backLink;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
