@@ -181,11 +181,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Rental_Invoices_Page.resx">
+      <DependentUpon>Rental_Invoices_Page.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Stoves_Info_Page.resx">
       <DependentUpon>Stoves_Info_Page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools_Info_Page.resx">
       <DependentUpon>Tools_Info_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool_Rental_Page.resx">
+      <DependentUpon>Tool_Rental_Page.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

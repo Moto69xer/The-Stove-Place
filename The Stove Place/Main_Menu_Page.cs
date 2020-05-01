@@ -93,7 +93,7 @@ namespace The_Stove_Place
 
         private void toolRentalButton_Click(object sender, EventArgs e)
         {
-            Rental_Invoices_Page rentInv = new Rental_Invoices_Page();
+            Tool_Rental_Page rentInv = new Tool_Rental_Page();
             rentInv.ShowDialog();
         }
         //}
@@ -147,6 +147,15 @@ namespace The_Stove_Place
             //FILL DS with Manufacture data
             adapter.Fill(ds, 0, 50, "Manufactures");
             dataGridView2.DataSource = ds.Tables[0];
+            dataGridView2.Columns[0].HeaderText = "     Manufacture Name";
+            dataGridView2.Columns[1].HeaderText = "     Website Link";
+            dataGridView2.Columns[2].HeaderText = "     Phone Number";
+            for (int i = 0; i <= 2; i++)
+            {
+                this.dataGridView2.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                this.dataGridView2.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+            this.dataGridView2.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
         }
 
         private void Main_Menu_Page_FormClosed(object sender, FormClosedEventArgs e)
