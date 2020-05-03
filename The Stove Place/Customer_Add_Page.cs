@@ -141,8 +141,6 @@ namespace The_Stove_Place
                 MessageBox.Show(ex.Message);
             }
             this.Close();
-            Customer_Information_Page custInfo = new Customer_Information_Page();
-            custInfo.ShowDialog();
         }
 
         void smtp_SendCompleted(object sender, AsyncCompletedEventArgs e)
