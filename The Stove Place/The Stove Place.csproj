@@ -210,5 +210,8 @@
   <ItemGroup>
     <None Include="Resources\The_Stove_Place_Logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\415802-forest-fire-flames-tree-disaster-apocalyptic-11.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

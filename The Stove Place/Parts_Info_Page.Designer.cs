@@ -43,10 +43,12 @@ namespace The_Stove_Place
             // partsInfoTitle
             // 
             this.partsInfoTitle.AutoSize = true;
+            this.partsInfoTitle.BackColor = System.Drawing.Color.Transparent;
             this.partsInfoTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.partsInfoTitle.Location = new System.Drawing.Point(540, 23);
+            this.partsInfoTitle.Location = new System.Drawing.Point(405, 19);
+            this.partsInfoTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.partsInfoTitle.Name = "partsInfoTitle";
-            this.partsInfoTitle.Size = new System.Drawing.Size(323, 46);
+            this.partsInfoTitle.Size = new System.Drawing.Size(262, 37);
             this.partsInfoTitle.TabIndex = 1;
             this.partsInfoTitle.Text = "Parts Information";
             this.partsInfoTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -54,10 +56,10 @@ namespace The_Stove_Place
             // logOutLink
             // 
             this.logOutLink.AutoSize = true;
-            this.logOutLink.Location = new System.Drawing.Point(1079, 46);
-            this.logOutLink.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.logOutLink.BackColor = System.Drawing.Color.Transparent;
+            this.logOutLink.Location = new System.Drawing.Point(809, 37);
             this.logOutLink.Name = "logOutLink";
-            this.logOutLink.Size = new System.Drawing.Size(55, 17);
+            this.logOutLink.Size = new System.Drawing.Size(42, 13);
             this.logOutLink.TabIndex = 2;
             this.logOutLink.TabStop = true;
             this.logOutLink.Text = "LogOut";
@@ -74,32 +76,32 @@ namespace The_Stove_Place
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(191, 181);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(143, 147);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView1.Size = new System.Drawing.Size(780, 247);
+            this.dataGridView1.Size = new System.Drawing.Size(585, 201);
             this.dataGridView1.TabIndex = 8;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::The_Stove_Place.Properties.Resources.The_Stove_Place_Logo;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(0, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(145, 121);
+            this.pictureBox1.Size = new System.Drawing.Size(109, 98);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // backLink
             // 
             this.backLink.AutoSize = true;
-            this.backLink.Location = new System.Drawing.Point(1077, 87);
-            this.backLink.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.backLink.BackColor = System.Drawing.Color.Transparent;
+            this.backLink.Location = new System.Drawing.Point(808, 71);
             this.backLink.Name = "backLink";
-            this.backLink.Size = new System.Drawing.Size(51, 17);
+            this.backLink.Size = new System.Drawing.Size(41, 13);
             this.backLink.TabIndex = 9;
             this.backLink.TabStop = true;
             this.backLink.Text = "< Back";
@@ -107,9 +109,10 @@ namespace The_Stove_Place
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(908, 87);
+            this.searchButton.Location = new System.Drawing.Point(681, 71);
+            this.searchButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(75, 23);
+            this.searchButton.Size = new System.Drawing.Size(56, 19);
             this.searchButton.TabIndex = 19;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
@@ -117,9 +120,10 @@ namespace The_Stove_Place
             // 
             // searchBar
             // 
-            this.searchBar.Location = new System.Drawing.Point(536, 87);
+            this.searchBar.Location = new System.Drawing.Point(402, 71);
+            this.searchBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchBar.Name = "searchBar";
-            this.searchBar.Size = new System.Drawing.Size(297, 22);
+            this.searchBar.Size = new System.Drawing.Size(224, 20);
             this.searchBar.TabIndex = 18;
             this.searchBar.Text = "Search";
             this.searchBar.Click += new System.EventHandler(this.searchBar_Click);
@@ -132,16 +136,19 @@ namespace The_Stove_Place
             "Part Id",
             "Manufacture Id",
             "Type"});
-            this.searchParamComboBox.Location = new System.Drawing.Point(383, 85);
+            this.searchParamComboBox.Location = new System.Drawing.Point(287, 69);
+            this.searchParamComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchParamComboBox.Name = "searchParamComboBox";
-            this.searchParamComboBox.Size = new System.Drawing.Size(121, 24);
+            this.searchParamComboBox.Size = new System.Drawing.Size(92, 21);
             this.searchParamComboBox.TabIndex = 17;
             // 
             // Parts_Info_Page
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1149, 519);
+            this.BackgroundImage = global::The_Stove_Place.Properties.Resources._415802_forest_fire_flames_tree_disaster_apocalyptic_11;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(862, 422);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.searchBar);
             this.Controls.Add(this.searchParamComboBox);
@@ -150,8 +157,7 @@ namespace The_Stove_Place
             this.Controls.Add(this.logOutLink);
             this.Controls.Add(this.partsInfoTitle);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(813, 505);
+            this.MinimumSize = new System.Drawing.Size(614, 418);
             this.Name = "Parts_Info_Page";
             this.ShowIcon = false;
             this.Text = "Parts Information";

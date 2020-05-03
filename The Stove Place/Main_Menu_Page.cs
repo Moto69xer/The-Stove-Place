@@ -28,6 +28,7 @@ namespace The_Stove_Place
             arr[1] = "Tool Info";
             arr[2] = "Stove Info";
             GetManufacturesList();
+            GetRentalList();
 
             this.productInfoButton.DataSource = arr;
 
@@ -158,6 +159,30 @@ namespace The_Stove_Place
             this.dataGridView2.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
         }
 
+        private void GetRentalList()
+        {
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataSet ds = new DataSet();
+            MySqlCommand cmd;
+            string select = "SELECT * FROM Tool_Rentals WHERE dateOfRental > DATE_ADD(CURDATE(), INTERVAL -7 DAY);";
+            cmd = new MySqlCommand(select, con);
+            adapter.SelectCommand = cmd;
+
+            //FILL DS with Manufacture data
+            adapter.Fill(ds, 0, 100, "Parts");
+            dataGridView1.DataSource = ds.Tables[0];
+            dataGridView1.Columns[0].HeaderText = "Rental Invoice #";
+            dataGridView1.Columns[1].HeaderText = "Employee Id";
+            dataGridView1.Columns[2].HeaderText = "Customer Id";
+            dataGridView1.Columns[3].HeaderText = "Rental Tool Id";
+            dataGridView1.Columns[4].HeaderText = "Rental Date";
+            dataGridView1.Columns[5].HeaderText = "Date of Return";
+            dataGridView1.Columns[6].HeaderText = "Cost Per Day";
+            dataGridView1.Columns[7].HeaderText = "Total Cost";
+            for (int i = 0; i <= 7; i++)
+                this.dataGridView1.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+        }
         private void Main_Menu_Page_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();

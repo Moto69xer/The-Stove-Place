@@ -44,6 +44,7 @@
             // usernameLabel
             // 
             this.usernameLabel.AutoSize = true;
+            this.usernameLabel.ForeColor = System.Drawing.Color.White;
             this.usernameLabel.Location = new System.Drawing.Point(6, 16);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Size = new System.Drawing.Size(55, 13);
@@ -59,6 +60,7 @@
             // 
             // loginButton
             // 
+            this.loginButton.ForeColor = System.Drawing.Color.Black;
             this.loginButton.Location = new System.Drawing.Point(9, 97);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(220, 23);
@@ -70,6 +72,7 @@
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
+            this.passwordLabel.ForeColor = System.Drawing.Color.White;
             this.passwordLabel.Location = new System.Drawing.Point(6, 55);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(53, 13);
@@ -86,11 +89,13 @@
             // 
             // loginInputControls
             // 
+            this.loginInputControls.BackColor = System.Drawing.Color.Transparent;
             this.loginInputControls.Controls.Add(this.passwordInputTextbox);
             this.loginInputControls.Controls.Add(this.passwordLabel);
             this.loginInputControls.Controls.Add(this.loginButton);
             this.loginInputControls.Controls.Add(this.usernameInputTextbox);
             this.loginInputControls.Controls.Add(this.usernameLabel);
+            this.loginInputControls.ForeColor = System.Drawing.Color.White;
             this.loginInputControls.Location = new System.Drawing.Point(125, 296);
             this.loginInputControls.Name = "loginInputControls";
             this.loginInputControls.Size = new System.Drawing.Size(235, 131);
@@ -100,9 +105,10 @@
             // 
             // logoPictureBox
             // 
-            this.logoPictureBox.BackColor = System.Drawing.SystemColors.Control;
+            this.logoPictureBox.BackColor = System.Drawing.Color.Wheat;
             this.logoPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logoPictureBox.BackgroundImage")));
             this.logoPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logoPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.logoPictureBox.Location = new System.Drawing.Point(114, 34);
             this.logoPictureBox.Name = "logoPictureBox";
             this.logoPictureBox.Size = new System.Drawing.Size(256, 256);
@@ -112,11 +118,13 @@
             // addUserButton
             // 
             this.addUserButton.AutoSize = true;
-            this.addUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))));
-            this.addUserButton.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.addUserButton.BackColor = System.Drawing.Color.Transparent;
+            this.addUserButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.addUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic);
+            this.addUserButton.ForeColor = System.Drawing.Color.White;
             this.addUserButton.Location = new System.Drawing.Point(272, 435);
             this.addUserButton.Name = "addUserButton";
-            this.addUserButton.Size = new System.Drawing.Size(200, 17);
+            this.addUserButton.Size = new System.Drawing.Size(202, 19);
             this.addUserButton.TabIndex = 6;
             this.addUserButton.Text = "Click Here To Add A New User";
             this.addUserButton.Click += new System.EventHandler(this.addUserButton_Click);
@@ -126,6 +134,8 @@
             this.AcceptButton = this.loginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::The_Stove_Place.Properties.Resources._415802_forest_fire_flames_tree_disaster_apocalyptic_11;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.addUserButton);
             this.Controls.Add(this.logoPictureBox);

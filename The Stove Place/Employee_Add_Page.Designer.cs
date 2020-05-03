@@ -55,6 +55,7 @@
             // addUserPageName
             // 
             this.addUserPageName.AutoSize = true;
+            this.addUserPageName.BackColor = System.Drawing.Color.Transparent;
             this.addUserPageName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
             this.addUserPageName.Location = new System.Drawing.Point(175, 13);
             this.addUserPageName.Name = "addUserPageName";
@@ -181,25 +182,27 @@
             // isAdminRadio
             // 
             this.isAdminRadio.AutoSize = true;
+            this.isAdminRadio.BackColor = System.Drawing.Color.Transparent;
             this.isAdminRadio.Location = new System.Drawing.Point(162, 319);
             this.isAdminRadio.Name = "isAdminRadio";
             this.isAdminRadio.Size = new System.Drawing.Size(106, 17);
             this.isAdminRadio.TabIndex = 15;
             this.isAdminRadio.TabStop = true;
             this.isAdminRadio.Text = "User Is An Admin";
-            this.isAdminRadio.UseVisualStyleBackColor = true;
+            this.isAdminRadio.UseVisualStyleBackColor = false;
             this.isAdminRadio.Click += new System.EventHandler(this.isAdminRadio_CheckedChanged);
             // 
             // isNotAdmin
             // 
             this.isNotAdmin.AutoSize = true;
+            this.isNotAdmin.BackColor = System.Drawing.Color.Transparent;
             this.isNotAdmin.Location = new System.Drawing.Point(312, 319);
             this.isNotAdmin.Name = "isNotAdmin";
             this.isNotAdmin.Size = new System.Drawing.Size(126, 17);
             this.isNotAdmin.TabIndex = 16;
             this.isNotAdmin.TabStop = true;
             this.isNotAdmin.Text = "User Is Not An Admin";
-            this.isNotAdmin.UseVisualStyleBackColor = true;
+            this.isNotAdmin.UseVisualStyleBackColor = false;
             this.isNotAdmin.Click += new System.EventHandler(this.isNotAdmin_CheckedChanged);
             // 
             // addUserButton
@@ -249,6 +252,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::The_Stove_Place.Properties.Resources._415802_forest_fire_flames_tree_disaster_apocalyptic_11;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.adminUsernameLabel);
             this.Controls.Add(this.adminUsernameTextbox);

@@ -58,7 +58,7 @@ namespace The_Stove_Place
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             DataSet ds = new DataSet();
             MySqlCommand cmd;
-            string select = "SELECT * FROM Tool_Rentals;";
+            string select = "SELECT rentalInvoice, employeeId, customerId, rentalToolId, dateOfRental, dateOfReturn, rentalPayment, totalPayment FROM Tool_Rentals;";
             cmd = new MySqlCommand(select, con);
             adapter.SelectCommand = cmd;
 
@@ -71,8 +71,9 @@ namespace The_Stove_Place
             dataGridView1.Columns[3].HeaderText = "Rental Tool Id";
             dataGridView1.Columns[4].HeaderText = "Rental Date";
             dataGridView1.Columns[5].HeaderText = "Date of Return";
-            dataGridView1.Columns[5].HeaderText = "Cost per Day";
-            for (int i = 0; i <= 5; i++)
+            dataGridView1.Columns[6].HeaderText = "Cost Per Day";
+            dataGridView1.Columns[7].HeaderText = "Total Cost";
+            for (int i = 0; i <= 7; i++)
                 this.dataGridView1.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             this.dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
@@ -197,6 +198,7 @@ namespace The_Stove_Place
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                con.Close();
             }
         }
     }
