@@ -177,7 +177,7 @@ namespace The_Stove_Place
             try
             {
                 string insertString =
-                    $"INSERT INTO Tool_Rentals VALUES(NULL,'{employeeId}','{customerId}','{toolId}',CURDATE(),NULL,'{float.Parse(price)}','');";
+                    $"INSERT INTO Tool_Rentals(rentalInvoice,employeeId,customerId,rentalToolId,dateOfRental,dateofReturn,rentalPayment) VALUES(NULL,'{employeeId}','{customerId}','{toolId}',CURDATE(),NULL,'{price}');";
                 string updateString =
                     $"UPDATE Rentable_Tools SET rentalStatus = 1 WHERE rentalToolId = '{toolId}';";
                 {

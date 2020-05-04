@@ -60,6 +60,7 @@ namespace The_Stove_Place
             //}
             //this is for the labes {
             recentRentalsLabel.Location = new Point(dataGridView1.Width / 2 - 60, recentRentalsLabel.Location.Y);
+            refreshButton.Location = new Point(recentRentalsLabel.Location.X - refreshButton.Width - 15, refreshButton.Location.Y);
             manuContactLabel.Location = new Point(dataGridView2.Location.X, manuContactLabel.Location.Y);
             //}
         }
@@ -191,5 +192,9 @@ namespace The_Stove_Place
             Application.Exit();
         }
 
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            GetRentalList();
+        }
     }
 }
