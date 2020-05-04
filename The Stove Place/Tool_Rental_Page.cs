@@ -58,7 +58,7 @@ namespace The_Stove_Place
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             DataSet ds = new DataSet();
             MySqlCommand cmd;
-            string select = "SELECT rentalInvoice, employeeId, customerId, rentalToolId, dateOfRental, dateOfReturn, rentalPayment, totalPayment FROM Tool_Rentals;";
+            string select = "SELECT rentalInvoice, employeeId, customerId, rentalToolId, dateOfRental, dateOfReturn, dayRented, rentalPayment, paymentTotal FROM Tool_Rentals;";
             cmd = new MySqlCommand(select, con);
             adapter.SelectCommand = cmd;
 
@@ -71,11 +71,14 @@ namespace The_Stove_Place
             dataGridView1.Columns[3].HeaderText = "Rental Tool Id";
             dataGridView1.Columns[4].HeaderText = "Rental Date";
             dataGridView1.Columns[5].HeaderText = "Date of Return";
-            dataGridView1.Columns[6].HeaderText = "Cost Per Day";
-            dataGridView1.Columns[7].HeaderText = "Total Cost";
-            for (int i = 0; i <= 7; i++)
+            dataGridView1.Columns[6].HeaderText = "Days Rented";
+            dataGridView1.Columns[7].HeaderText = "Cost Per Day";
+            dataGridView1.Columns[8].HeaderText = "Total Payment";
+            for (int i = 0; i <= 8; i++)
                 this.dataGridView1.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             this.dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridView1.Columns[7].DefaultCellStyle.Format = "c2";
+            this.dataGridView1.Columns[8].DefaultCellStyle.Format = "c2";
         }
         private void searchBar_Click(object sender, EventArgs e)
         {

@@ -45,10 +45,9 @@ namespace The_Stove_Place
             this.stovesInfoTitle.AutoSize = true;
             this.stovesInfoTitle.BackColor = System.Drawing.Color.Transparent;
             this.stovesInfoTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stovesInfoTitle.Location = new System.Drawing.Point(405, 19);
-            this.stovesInfoTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.stovesInfoTitle.Location = new System.Drawing.Point(540, 23);
             this.stovesInfoTitle.Name = "stovesInfoTitle";
-            this.stovesInfoTitle.Size = new System.Drawing.Size(283, 37);
+            this.stovesInfoTitle.Size = new System.Drawing.Size(352, 46);
             this.stovesInfoTitle.TabIndex = 1;
             this.stovesInfoTitle.Text = "Stoves Information";
             this.stovesInfoTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -57,9 +56,10 @@ namespace The_Stove_Place
             // 
             this.logOutLink.AutoSize = true;
             this.logOutLink.BackColor = System.Drawing.Color.Transparent;
-            this.logOutLink.Location = new System.Drawing.Point(809, 37);
+            this.logOutLink.Location = new System.Drawing.Point(1079, 46);
+            this.logOutLink.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.logOutLink.Name = "logOutLink";
-            this.logOutLink.Size = new System.Drawing.Size(42, 13);
+            this.logOutLink.Size = new System.Drawing.Size(55, 17);
             this.logOutLink.TabIndex = 2;
             this.logOutLink.TabStop = true;
             this.logOutLink.Text = "LogOut";
@@ -76,11 +76,12 @@ namespace The_Stove_Place
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 124);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 129);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridView1.Size = new System.Drawing.Size(836, 288);
+            this.dataGridView1.Size = new System.Drawing.Size(1117, 354);
             this.dataGridView1.TabIndex = 8;
             // 
             // pictureBox1
@@ -89,9 +90,9 @@ namespace The_Stove_Place
             this.pictureBox1.BackgroundImage = global::The_Stove_Place.Properties.Resources.The_Stove_Place_Logo;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(0, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(109, 98);
+            this.pictureBox1.Size = new System.Drawing.Size(145, 121);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -99,9 +100,10 @@ namespace The_Stove_Place
             // 
             this.backLink.AutoSize = true;
             this.backLink.BackColor = System.Drawing.Color.Transparent;
-            this.backLink.Location = new System.Drawing.Point(808, 71);
+            this.backLink.Location = new System.Drawing.Point(1077, 87);
+            this.backLink.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.backLink.Name = "backLink";
-            this.backLink.Size = new System.Drawing.Size(41, 13);
+            this.backLink.Size = new System.Drawing.Size(51, 17);
             this.backLink.TabIndex = 9;
             this.backLink.TabStop = true;
             this.backLink.Text = "< Back";
@@ -109,10 +111,10 @@ namespace The_Stove_Place
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(700, 82);
-            this.searchButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchButton.Location = new System.Drawing.Point(933, 101);
+            this.searchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(56, 19);
+            this.searchButton.Size = new System.Drawing.Size(75, 23);
             this.searchButton.TabIndex = 22;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
@@ -120,10 +122,10 @@ namespace The_Stove_Place
             // 
             // searchBar
             // 
-            this.searchBar.Location = new System.Drawing.Point(422, 82);
-            this.searchBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchBar.Location = new System.Drawing.Point(563, 101);
+            this.searchBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchBar.Name = "searchBar";
-            this.searchBar.Size = new System.Drawing.Size(224, 20);
+            this.searchBar.Size = new System.Drawing.Size(297, 22);
             this.searchBar.TabIndex = 21;
             this.searchBar.Text = "Search";
             this.searchBar.Click += new System.EventHandler(this.searchBar_Click);
@@ -139,19 +141,19 @@ namespace The_Stove_Place
             "Color",
             "Manufacture Id",
             "Manufacture Name"});
-            this.searchParamComboBox.Location = new System.Drawing.Point(307, 80);
-            this.searchParamComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchParamComboBox.Location = new System.Drawing.Point(409, 98);
+            this.searchParamComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchParamComboBox.Name = "searchParamComboBox";
-            this.searchParamComboBox.Size = new System.Drawing.Size(92, 21);
+            this.searchParamComboBox.Size = new System.Drawing.Size(121, 24);
             this.searchParamComboBox.TabIndex = 20;
             // 
             // Stoves_Info_Page
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::The_Stove_Place.Properties.Resources._415802_forest_fire_flames_tree_disaster_apocalyptic_11;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(862, 422);
+            this.ClientSize = new System.Drawing.Size(1149, 519);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.searchBar);
             this.Controls.Add(this.searchParamComboBox);
@@ -160,7 +162,8 @@ namespace The_Stove_Place
             this.Controls.Add(this.logOutLink);
             this.Controls.Add(this.stovesInfoTitle);
             this.Controls.Add(this.pictureBox1);
-            this.MinimumSize = new System.Drawing.Size(614, 418);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(813, 504);
             this.Name = "Stoves_Info_Page";
             this.ShowIcon = false;
             this.Text = "Stoves Information";
